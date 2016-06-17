@@ -1388,13 +1388,13 @@ figure.effect-goliath:hover p {
     font-size: 32px;
     font-family: Pe-icon-7-stroke; }
     .sidebar-left #menu-toggle span:before {
-      content: "\e696"; }
+      content: "\e657"; }
 .sidebar-left .toggled #menu-toggle {
   color: #8e8e8e; }
   .sidebar-left .toggled #menu-toggle span {
     font-family: Pe-icon-7-stroke; }
     .sidebar-left .toggled #menu-toggle span:before {
-      content: "\e696"; }
+      content: "\e657"; }
 .sidebar-left .side-widget {
   color: #a7a7a7;
   padding: 20px 60px;
@@ -1560,13 +1560,13 @@ figure.effect-goliath:hover p {
     font-size: 32px;
     font-family: Pe-icon-7-stroke; }
     .sidebar-right #menu-toggle span:before {
-      content: "\e696"; }
+      content: "\e657"; }
 .sidebar-right .toggled #menu-toggle {
   color: #8e8e8e; }
   .sidebar-right .toggled #menu-toggle span {
     font-family: Pe-icon-7-stroke; }
     .sidebar-right .toggled #menu-toggle span:before {
-      content: "\e696"; }
+      content: "\e657"; }
 .sidebar-right .side-widget {
   color: #a7a7a7;
   padding: 20px 60px;
