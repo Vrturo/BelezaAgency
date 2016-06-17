@@ -10,5 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//
+//= script
+//= lib_folder
 //= require_tree .
