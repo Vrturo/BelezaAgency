@@ -893,7 +893,7 @@ figure.effect-goliath p {
 figure.effect-goliath:hover .popup-call {
   opacity: 1; }
 figure.effect-goliath:hover img {
-  opacity: 0.8;
+  opacity: 0.2;
   -webkit-transform: translate3d(0, 0, 0) scale(1);
   transform: translate3d(0, 0, 0) scale(1); }
 figure.effect-goliath:hover h3 {
@@ -1663,4 +1663,11 @@ figure.effect-goliath:hover p {
   .padding-side-60 {
     padding: 0 10px; } }
 
+/*------------------------------------------------------------------
+[14. Others]
+*/
+.boxxed{
+  width: 285px;
+  height: 285px
+}
 /*# sourceMappingURL=style.css.map */
