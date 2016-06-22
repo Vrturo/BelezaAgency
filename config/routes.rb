@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/about' => 'index#about'
 
-  # get '/contact' => 'index#contact'
+  get '/contact' => 'index#contact'
 
   get '/join' => 'index#join'
   # Example of regular route:
