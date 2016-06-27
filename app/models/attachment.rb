@@ -1,4 +1,5 @@
 class Attachment < ActiveRecord::Base
+  has_many :attachments
 
   def initialize(params = {})
     file = params.delete(:file)
