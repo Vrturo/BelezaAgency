@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :email
+      t.string :password
       t.date :dob
       t.string :gender
       t.string :language_one
@@ -20,8 +21,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.integer :zip_code
-      t.string :email
-      t.string :password
+      t.integer :phone_number
 
       end
 

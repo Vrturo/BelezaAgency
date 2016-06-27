@@ -13,15 +13,15 @@ class AttachmentsController < ApplicationController
   def create
     @attachment = Attachment.new(attachment_params)
 
-    respond_to do |format|
-      if @attachment.save
-        format.html { redirect_to attachments_path, notice: 'attachment was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @attachment }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @attachment.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @attachment.save
+    #     format.html { redirect_to attachments_path, notice: 'attachment was successfully created.' }
+    #     format.json { render action: 'show', status: :created, location: @attachment }
+    #   else
+    #     format.html { render action: 'new' }
+    #     format.json { render json: @attachment.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   def attachment_params

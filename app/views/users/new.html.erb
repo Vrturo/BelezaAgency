@@ -7,28 +7,28 @@
              <p style="text-align: center">Have an account?  <a href="/join"><b>Log in!</b></a><p>
             <div class="e-divider-1"></div>
 
-            <form action="#" method="post" enctype="multipart/form-data" id="join">
+            <form action="/users" method="post" class="new_user" id="new_user" enctype="multipart/form-data">
               <div class="col-lg-5">
                 <div class="bs-example">
                   <input type="hidden"  class="base_url">
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 control-label" align="right">First Name</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="inputEmail3" name="firstname" value="" required><br>
+                      <input type="text" class="form-control" id="inputEmail3" name="first_name" value="" required><br>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label" align="right">Last Name</label>
                     <div class="col-sm-8">
-                     <input type="text" class="form-control" id="inputPassword3" name="lastname" value="" required><br>
+                     <input type="text" class="form-control" id="inputPassword3" name="last_name" value="" required><br>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4" align="right">Date of Birth</label>
                     <div class="col-sm-8">
-                        <input type="date" class="form-control" placeholder="Date of Birth" required><br>
+                        <input type="date" class="form-control" placeholder="dob" required><br>
                     </div>
                   </div>
 
@@ -47,7 +47,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label" align="right">Bilingual?</label>
                     <div class="col-sm-4">
-                      <select name="bilingual" class="form-control" id="form-validation-field-1">
+                      <select name="language_one" class="form-control" id="form-validation-field-1">
                         <option value=" ">Choose One</option>
                         <option value="English">English</option>
                         <option value="Spanish">Spanish</option>
@@ -61,7 +61,7 @@
                       </select>
                     </div>
                     <div class="col-sm-4">
-                      <select name="bilingual1" class="form-control">
+                      <select name="language_two" class="form-control">
                         <option value="none">Choose One</option>
                         <option value="English">English</option>
                         <option value="Spanish">Spanish</option>
@@ -130,14 +130,14 @@
                     <div class="form-group">
                       <label class="col-sm-4 form-label" align="right">Pant Size</label>
                       <div class="col-sm-8">
-                        <input type="number" class="form-control" required><br>
+                        <input name="pant_size" type="number" class="form-control" required><br>
                       </div>
                     </div>
 
                     <div class="form-group">
                       <label class="col-sm-4 control-label" align="right">Shoe Size</label>
                       <div class="col-sm-8">
-                        <input type="number" name="shoe" class="form-control" value="" required><br>
+                        <input name="shoe_size" type="number" class="form-control" value="" required><br>
                       </div>
                     </div>
 
@@ -152,7 +152,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label" for="personal-site" align="right">Personal Website</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" name="personal_site" id="personal-site"><br>
+                      <input type="text" class="form-control" name="website" id="personal-site"><br>
                     </div>
                   </div>
 
@@ -197,7 +197,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label" align="right">Cell Phone</label>
                     <div class="col-sm-8">
-                      <input type="number" class="form-control bfh-phone" maxlength="10" data-country="US" required><br>
+                      <input type="number" name="phone_number" class="form-control bfh-phone" maxlength="10" data-country="US" required><br>
                     </div>
                   </div>
 
@@ -205,7 +205,7 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label" align="right">Email Address</label>
                     <div class="col-sm-8">
-                      <input type="email" name="email" class="form-control mdlemail" value="" required>
+                      <input type="email" name="email" class="form-control mdlemail" value="" required><br>
                       <!-- <span style="color:red;display:none;" class="notavailable">Login ID is not available</span>
                       <span style="color:green;display:none;" class="available">Login ID is available</span><br> -->
                     </div>
