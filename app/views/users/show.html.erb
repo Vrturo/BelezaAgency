@@ -3,7 +3,7 @@
 
      <div class="e-divider-8"></div>
      <div class="post-header">
-        <h2 class="e-uppercase">Name</h2>
+        <h2 class="e-uppercase"><%= @user.first_name %> <%= @user.last_name %></h2>
         <div class="e-divider-2"></div>
      </div>
      <div class="e-divider-4"></div>
@@ -12,10 +12,10 @@
            <img src="/imgs/random-girl.png" class="img-responsive">
            <div class="e-divider-4"></div>
            <ul class="jobinfo">
-              <li>Date of Birth: <span>02.03.2016</span></li>
-              <li>Phone Number: <span>123 456 7890</span></li>
-              <li>Personal Website: <span>oneproduct.com</span></li>
-              <li>Height: <span>5 '6</span></li>
+              <li>Date of Birth: <span><%= @user.dob %></span></li>
+              <li>Phone Number: <span><%= @user.phone_number %></span></li>
+              <li>Personal Website: <span><%= @user.website %></span></li>
+              <li>Height: <span><%= @user.height %></span></li>
            </ul>
         </div>
         <div class="col-md-1"></div>
@@ -126,7 +126,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @user.name %>
+  <%= @user.first_name %>
 </p>
 
 <p>

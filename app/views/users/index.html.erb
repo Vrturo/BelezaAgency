@@ -1,20 +1,22 @@
 <!-- Hero Image -->
-   <section id="portfolio-hero-image">
-      <div class="layer"></div>
-      <div class="container-fluid hero-wrapper">
-         <div class="row text-right">
-            <div class="col-md-12">
-               <div class="hero-text">
-                  <h2 class="font-accident-two-normal">The Girls</h2>
-                  <p class="font-accident-two-normal e-uppercase letter-spacing-03">
-                     There are many variations of passages of Lorem Ipsum available
-                  </p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <!-- / Hero Image -->
+ <section id="portfolio-hero-image">
+    <div class="layer"></div>
+    <div class="container-fluid hero-wrapper">
+       <div class="row text-right">
+          <div class="col-md-12">
+             <div class="hero-text">
+                <h2 class="font-accident-two-normal">The Girls</h2>
+                <p class="font-accident-two-normal e-uppercase letter-spacing-03">
+                   There are many variations of passages of Lorem Ipsum available
+                </p>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- / Hero Image -->
+
+<h1>Users</h1>
 
 
 <section id="portfolio" class="e-block e-block-skin pt-section" data-stellar-background-ratio="0.5" data-name="Portfolio">
@@ -26,13 +28,44 @@
         <div id="posts" class="row popup-container">
 
            <div class="grid-item posters misc col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 0%; top: 0px;">
+              <% @users.each do |user| %>
+                <div class="item-wrap">
+                   <figure class="effect-goliath boxxed">
+                      <img src="/imgs/random-girl.png" class="img-responsive" alt="img11">
+                      <figcaption>
+                         <div class="fig-description">
+                            <h3><%= user.first_name %> <%= user.last_name %></h3>
+                            <p><%= user.email %></p>
+                         </div>
+                         <a href="/users/<%=user.id%>">View more</a>
+                      </figcaption>
+                   </figure>
+                </div>
+             <% end %>
+           </div>
+         </div>
+       </div>
+     </div>
+ </section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1>Girls</h1>
+
+
+ <section id="portfolio" class="e-block e-block-skin pt-section" data-stellar-background-ratio="0.5" data-name="Portfolio">
+  <div class="light">
+     <div class="dividewhite4"></div>
+
+     <div class="grid container-fluid " style="position: relative; height: 1140px;">
+
+        <div id="posts" class="row popup-container">
+           <div class="grid-item grid-sizer posters col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 25%; top: 0px;">
               <div class="item-wrap">
                  <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img11">
+                    <img src="/imgs/random-girl2.png" class="img-responsive" alt="img03">
                     <figcaption>
                        <div class="fig-description">
-                          <h3>One</h3>
-                          <p>#media-objects #misc</p>
+                          <h3>Two</h3>
+                          <p>#posters #misc</p>
                        </div>
                        <a href="portfolio-item.html">View more</a>
                     </figcaption>
@@ -53,150 +86,7 @@
                  </figure>
               </div>
            </div>
-           <div class="grid-item media-objects misc col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 50%; top: 0px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img11">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Three</h3>
-                          <p>#media-objects #misc</p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item media-objects misc col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 75%; top: 0px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Four</h3>
-                          <p>#media-objects #misc</p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-
-           <div class="grid-item posters media-objects col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 0%; top: 285px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img11">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Five</h3>
-                          <p>#posters #media-objects </p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item media-objects misc col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 25%; top: 285px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Six</h3>
-                          <p>#media-objects #misc</p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item posters col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 50%; top: 285px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Seven</h3>
-                          <p>#posters</p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item posters media-objects col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 75%; top: 285px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Eight</h3>
-                          <p>#others </p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-
-           <div class="grid-item posters col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 0%; top: 570px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Nine</h3>
-                          <p>#others </p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item posters media-objects col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 25%; top: 570px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Ten</h3>
-                          <p>#others </p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item media-objects col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 50%; top: 570px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Eleven</h3>
-                          <p>#others </p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item media-objects posters col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 75%; top: 570px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Twelve</h3>
-                          <p>#others </p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-
-           <div class="grid-item posters col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 0%; top: 855px;">
+           <div class="grid-item grid-sizer posters col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 25%; top: 0px;">
               <div class="item-wrap">
                  <figure class="effect-goliath boxxed">
                     <img src="/imgs/random-girl2.png" class="img-responsive" alt="img03">
@@ -210,54 +100,22 @@
                  </figure>
               </div>
            </div>
-           <div class="grid-item media-objects misc col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 25%; top: 855px;">
+           <div class="grid-item grid-sizer posters col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 25%; top: 0px;">
               <div class="item-wrap">
                  <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img11">
+                    <img src="/imgs/random-girl2.png" class="img-responsive" alt="img03">
                     <figcaption>
                        <div class="fig-description">
-                          <h3>Three</h3>
-                          <p>#media-objects #misc</p>
+                          <h3>Two</h3>
+                          <p>#posters #misc</p>
                        </div>
                        <a href="portfolio-item.html">View more</a>
                     </figcaption>
                  </figure>
               </div>
            </div>
-           <div class="grid-item posters misc col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 50%; top: 855px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img11">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>One</h3>
-                          <p>#media-objects #misc</p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-           <div class="grid-item media-objects misc col-lg-3 col-md-4 col-sm-6 nopadding" style="position: absolute; left: 75%; top: 855px;">
-              <div class="item-wrap">
-                 <figure class="effect-goliath boxxed">
-                    <img src="/imgs/random-girl.png" class="img-responsive" alt="img03">
-                    <figcaption>
-                       <div class="fig-description">
-                          <h3>Four</h3>
-                          <p>#media-objects #misc</p>
-                       </div>
-                       <a href="portfolio-item.html">View more</a>
-                    </figcaption>
-                 </figure>
-              </div>
-           </div>
-
-
         </div>
-
      </div>
-
   </div>
 </section>
 
@@ -265,32 +123,3 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Login</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.login %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
