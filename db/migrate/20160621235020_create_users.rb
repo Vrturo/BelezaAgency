@@ -23,8 +23,6 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :zip_code
       t.integer :phone_number
 
-      end
-
       t.timestamps null: false
     end
   end

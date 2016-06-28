@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20160627032423) do
 
   create_table "attachments", force: :cascade do |t|
+    t.integer  "user_id"
     t.string   "filename"
     t.string   "content_type"
     t.binary   "file_contents"
@@ -21,13 +22,32 @@ ActiveRecord::Schema.define(version: 20160627032423) do
     t.datetime "updated_at"
   end
 
+  add_index "attachments", ["user_id"], name: "index_attachments_on_user_id"
+
   create_table "users", force: :cascade do |t|
+    t.boolean  "admin",        default: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.boolean  "admin",      default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "password"
+    t.date     "dob"
+    t.string   "gender"
+    t.string   "language_one"
+    t.string   "language_two"
+    t.string   "height"
+    t.integer  "age"
+    t.string   "shirt_size"
+    t.string   "dress_size"
+    t.integer  "pant_size"
+    t.integer  "shoe_size"
+    t.string   "website"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip_code"
+    t.integer  "phone_number"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
 end

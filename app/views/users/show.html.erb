@@ -1,3 +1,6 @@
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
 <section id="port-item-details">
   <div class="container-fluid padding-side-60">
 
@@ -13,59 +16,44 @@
            <div class="e-divider-4"></div>
            <ul class="jobinfo">
               <li>Date of Birth: <span><%= @user.dob %></span></li>
+              <li>Age: <span><%= @user.age %></span></li>
               <li>Phone Number: <span><%= @user.phone_number %></span></li>
-              <li>Personal Website: <span><%= @user.website %></span></li>
               <li>Height: <span><%= @user.height %></span></li>
            </ul>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-7">
-           <h3 class="font-accident-two-normal e-uppercase">Overview</h3>
-           <div class="e-divider-2"></div>
-           <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was popularised in
-              the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
-           </p>
 
            <div class="e-divider-4"></div>
 
            <div class="row">
               <div class="col-md-4">
-                 <i class="pe-7s-target"></i>
-                 <h4 class="font-accident-two-normal e-uppercase">Details</h4>
+                 <i class="pe-7s-mail"></i>
+                 <h4 class="font-accident-two-normal e-uppercase"> E-mail</h4>
                  <div class="e-divider-1"></div>
-                 <p class="small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown
+                 <p>
+                    <%= @user.email %>
                  </p>
                  <div class="e-divider-4"></div>
               </div>
               <div class="col-md-4">
-                 <i class="pe-7s-science"></i>
-                 <h4 class="font-accident-two-normal e-uppercase">Misc</h4>
+                 <i class="pe-7s-home"></i>
+                 <h4 class="font-accident-two-normal e-uppercase">Address</h4>
                  <div class="e-divider-1"></div>
-                 <p class="small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown
+                 <p>
+                    <%= @user.address %>
+                 </p>
+                 <p>
+                    <%= @user.city %>, <%= @user.state %>   <%= @user.zip_code%>
                  </p>
                  <div class="e-divider-4"></div>
               </div>
               <div class="col-md-4">
-                 <i class="pe-7s-target"></i>
-                 <h4 class="font-accident-two-normal e-uppercase">Details</h4>
+                 <i class="pe-7s-global"></i>
+                 <h4 class="font-accident-two-normal e-uppercase">Personal Website</h4>
                  <div class="e-divider-1"></div>
-                 <p class="small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown
+                 <p>
+                    <%= @user.website %>
                  </p>
                  <div class="e-divider-4"></div>
               </div>
@@ -73,38 +61,34 @@
 
            <div class="row">
               <div class="col-md-3">
-                 <h4 class="font-accident-two-normal e-uppercase">Information</h4>
+                 <h4 class="font-accident-two-normal e-uppercase">Shirt Size</h4>
                  <div class="e-divider-1"></div>
-                 <p class="small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard
+                 <p>
+                    <%= @user.shirt_size %>
                  </p>
                  <div class="e-divider-4"></div>
               </div>
               <div class="col-md-3">
-                 <h4 class="font-accident-two-normal e-uppercase">Stuff</h4>
+                 <h4 class="font-accident-two-normal e-uppercase">Dress Size</h4>
                  <div class="e-divider-1"></div>
-                 <p class="small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard
+                 <p>
+                    <%= @user.dress_size %>
                  </p>
                  <div class="e-divider-4"></div>
               </div>
               <div class="col-md-3">
-                 <h4 class="font-accident-two-normal e-uppercase">Details</h4>
+                 <h4 class="font-accident-two-normal e-uppercase">Pant Size</h4>
                  <div class="e-divider-1"></div>
-                 <p class="small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard
+                 <p>
+                    <%= @user.pant_size %>
                  </p>
                  <div class="e-divider-4"></div>
               </div>
               <div class="col-md-3">
-                 <h4 class="font-accident-two-normal e-uppercase">Stuff</h4>
+                 <h4 class="font-accident-two-normal e-uppercase">Shoe Size</h4>
                  <div class="e-divider-1"></div>
-                 <p class="small">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard
+                 <p>
+                    <%= @user.shoe_size %>
                  </p>
                  <div class="e-divider-4"></div>
               </div>
@@ -119,21 +103,3 @@
 
   </div>
 </section>
-
-
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
