@@ -53,6 +53,10 @@ ActiveRecord::Schema.define(version: 20160629193753) do
     t.string   "photo_four_content_type"
     t.integer  "photo_four_file_size"
     t.datetime "photo_four_updated_at"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
   end
 
 end
