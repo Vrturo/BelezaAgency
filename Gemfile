@@ -36,6 +36,7 @@ gem 'aws-sdk', '< 2.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+gem 'dotenv-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '1.3.11'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
