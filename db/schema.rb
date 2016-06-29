@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160627032423) do
+ActiveRecord::Schema.define(version: 20160629193753) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "user_id"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160627032423) do
   add_index "attachments", ["user_id"], name: "index_attachments_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.boolean  "admin",        default: false
+    t.boolean  "admin",                    default: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
@@ -46,8 +46,24 @@ ActiveRecord::Schema.define(version: 20160627032423) do
     t.string   "state"
     t.integer  "zip_code"
     t.integer  "phone_number"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "photo_one_file_name"
+    t.string   "photo_one_content_type"
+    t.integer  "photo_one_file_size"
+    t.datetime "photo_one_updated_at"
+    t.string   "photo_two_file_name"
+    t.string   "photo_two_content_type"
+    t.integer  "photo_two_file_size"
+    t.datetime "photo_two_updated_at"
+    t.string   "photo_three_file_name"
+    t.string   "photo_three_content_type"
+    t.integer  "photo_three_file_size"
+    t.datetime "photo_three_updated_at"
+    t.string   "photo_four_file_name"
+    t.string   "photo_four_content_type"
+    t.integer  "photo_four_file_size"
+    t.datetime "photo_four_updated_at"
   end
 
 end
