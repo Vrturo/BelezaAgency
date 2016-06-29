@@ -5,29 +5,10 @@ class User < ActiveRecord::Base
 
     validates :email, uniqueness: true
 
-    has_attached_file :photo_one, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-    }
-
-    has_attached_file :photo_two, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-    }
-
-    has_attached_file :photo_three, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-    }
-
-    has_attached_file :photo_four, styles: {
-    thumb: '100x100>',
-    square: '200x200#',
-    medium: '300x300>'
-    }
+    has_attached_file :photo_one
+    has_attached_file :photo_two
+    has_attached_file :photo_three
+    has_attached_file :photo_four
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :photo_one, :content_type => /\Aimage\/.*\Z/

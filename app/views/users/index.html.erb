@@ -31,7 +31,7 @@
               <% @users.each do |user| %>
                 <div class="item-wrap">
                    <figure class="effect-goliath boxxed">
-                      <img src="/imgs/random-girl.png" class="img-responsive" alt="img11">
+                      <img src=<%=user.photo_one.url%> class="img-responsive" alt="img11">
                       <figcaption>
                          <div class="fig-description">
                             <h3><%= user.first_name %> <%= user.last_name %></h3>
