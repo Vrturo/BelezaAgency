@@ -6,6 +6,16 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('belezaagency'),
+      access_key_id: ENV.fetch('AKIAIT5O7TY3OQWCFBSA'),
+      secret_access_key: ENV.fetch('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'),
+      s3_region: ENV.fetch('Northern California'),
+    }
+  }
+
   # Do not eager load code on boot.
   config.eager_load = false
 
