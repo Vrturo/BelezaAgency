@@ -7,14 +7,14 @@ Rails.application.configure do
   config.cache_classes = false
 
   config.paperclip_defaults = {
-    storage: :s3,
-    s3_credentials: {
-      bucket: ENV.fetch('belezaagency'),
-      access_key_id: ENV.fetch('AKIAIT5O7TY3OQWCFBSA'),
-      secret_access_key: ENV.fetch('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'),
-      s3_region: ENV.fetch('Northern California'),
-    }
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('S3_BUCKET_NAME'),
+    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    s3_region: ENV.fetch('AWS_REGION'),
   }
+}
 
   # Do not eager load code on boot.
   config.eager_load = false
