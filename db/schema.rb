@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20160629193753) do
     t.string   "city"
     t.string   "state"
     t.integer  "zip_code"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.string   "photo_one_file_name"

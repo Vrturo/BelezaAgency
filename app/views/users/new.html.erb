@@ -59,7 +59,7 @@
                       <label class="col-sm-4 control-label" align="right">Bilingual?</label>
                       <div class="col-sm-4">
                         <select name="user[language_one]" class="form-control" id="form-validation-field-1">
-                          <option value=" ">Choose One</option>
+                          <option value="none">Choose One</option>
                           <option value="English">English</option>
                           <option value="Spanish">Spanish</option>
                           <option value="French">French</option>
@@ -126,7 +126,7 @@
                         <label class="col-sm-4 form-label" align="right">Dress Size</label>
                         <div class="col-sm-8">
                           <select name="user[dress_size]" class="form-control" required>
-                            <option value="">Select Size</option>
+                            <option value=" ">Select Size</option>
                             <option value="XS">XS</option>
                             <option value="S">S</option>
                             <option value="M">M</option>
@@ -162,7 +162,7 @@
                     <div class="form-group">
                       <label class="col-sm-4 control-label" for="personal-site" align="right">Personal Website</label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" name="user[website]" id="personal-site"><br>
+                        <input type="text" class="form-control" name="user[website]" id="personal-site" value="none" ><br>
                       </div>
                     </div>
 
@@ -234,7 +234,7 @@
                     <div class="form-group">
                       <label class="col-sm-4 control-label" align="right">Confirm Password</label>
                       <div class="col-sm-8">
-                        <input id="confirm_password" type="password" name="password" placeholder="Confirm Password" class="form-control" value=""><br>
+                        <input id="confirm_password" type="password" name="password" placeholder="Confirm Password" class="form-control" name="confirm_password" ><br>
                       </div>
                     </div>
 
