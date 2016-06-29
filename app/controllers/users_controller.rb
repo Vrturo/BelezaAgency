@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(:id)
   end
 
   # GET /users/new
@@ -22,7 +21,6 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(:id)
   end
 
   # POST /users
@@ -35,7 +33,7 @@ class UsersController < ApplicationController
           # Tell the UserMailer to send a welcome email after save
           # UserMailer.welcome_email(@user).deliver_later
 
-          format.html { redirect_to('/users/#{user.id}', notice: 'User was successfully created.') }
+          format.html { redirect_to(@user, notice: 'User was successfully created.') }
           format.json { render json: @user, status: :created, location: @user }
        else
           format.html { render action: 'new' }
@@ -77,7 +75,7 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       # params.require(:user).permit(:name, :email, :login)
-      params.permit( :first_name, :last_name, :email, :password,
+      params.require(:user).permit( :first_name, :last_name, :email, :password,
                                     :dob, :gender, :language_one, :language_two,
                                     :height, :age, :shirt_size, :dress_size,
                                     :pant_size, :shoe_size, :website, :address,

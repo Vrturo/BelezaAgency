@@ -21,7 +21,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.integer :zip_code
-      t.integer :phone_number
+      t.string :phone_number
 
       t.timestamps null: false
     end
