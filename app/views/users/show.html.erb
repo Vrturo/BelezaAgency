@@ -14,7 +14,8 @@
      <div class="e-divider-4"></div>
      <div class="row">
         <div class="col-md-4">
-           <img src=<%= @user.photo_four%> class="img-responsive">
+          <%= image_tag @user.photo_one.url %>
+
            <div class="e-divider-4"></div>
            <ul class="jobinfo">
               <li>Date of Birth: <span><%= @user.dob %></span></li>
@@ -29,7 +30,7 @@
 
                  <div class="e-divider-2"></div>
                  <p>
-                    File
+                    <%=@user.resume%>
                  </p>
         </div>
         <div class="col-md-1"></div>
