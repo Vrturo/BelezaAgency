@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160629193753) do
 
-  create_table "attachments", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "filename"
-    t.string   "content_type"
-    t.binary   "file_contents"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "attachments", ["user_id"], name: "index_attachments_on_user_id"
-
   create_table "users", force: :cascade do |t|
     t.boolean  "admin",                    default: false
     t.string   "first_name"

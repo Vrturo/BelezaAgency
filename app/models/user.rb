@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
     validates :first_name, :last_name, :email, presence: true
-    validates :email, uniqueness: true
+    validates :password, presence: true, length: { minimum: 6 }
+    validates_confirmation_of :password
 
-    # has_many :attachments
-    # accepts_nested_attributes_for :attachments
+    validates :email, uniqueness: true
 
     has_attached_file :photo_one, styles: {
     thumb: '100x100>',
