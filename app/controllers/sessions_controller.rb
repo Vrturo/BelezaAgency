@@ -1,10 +1,11 @@
 class SessionsController < ApplicationController
 
   def create
-    authorized_user = User.authenticate(params[:email],params[:password])
-    user = User.find_by(email: params[:email])
+    # authorized_user = User.authenticate(params[:email],params[:password])
+    @user = User.find_by(email: params[:email])
 
-    if authorized_user
+    if @user.password == params[:password]
+      session[:user_id] = @user.id
       redirect_to controller: "users", action: "show", id: user.id
     else
       flash[:notice] = "Invalid Username or Password"

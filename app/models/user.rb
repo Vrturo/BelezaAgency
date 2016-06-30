@@ -1,4 +1,8 @@
+require 'bcrypt'
 class User < ActiveRecord::Base
+    # users.password_hash in the database is a :string
+    include BCrypt
+
     validates :first_name, :last_name, :email, presence: true
     validates :password, presence: true, length: { minimum: 6 }
     validates_confirmation_of :password
@@ -17,6 +21,17 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :photo_three, :content_type => /\Aimage\/.*\Z/
   validates_attachment_content_type :photo_four, :content_type => /\Aimage\/.*\Z/
   validates_attachment :resume, :content_type => { :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document) }
+
+
+
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
+  end
 
   def self.authenticate(email, login_password)
       user = User.find_by(email: email)
