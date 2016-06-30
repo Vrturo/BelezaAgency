@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
        if @user.email && @user.password == params[:password]
           session[:user_id] = @user.id
-
+          p 'session is #{session[:user_id]}'
           redirect_to @user
         else
           flash.now.alert = "Invalid Email or Password"
