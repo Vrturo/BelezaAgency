@@ -9,15 +9,16 @@
             <!-- <form action="/users" method="post" class="new_user" id="new_user" enctype="multipart/form-data"> -->
             <%= form_for(@user, multipart: true) do |f| %>
               <% if @user.errors.any? %>
+              <div class="alert alert-danger">
                 <div class="center-text" id="error_explanation">
-                  <h3><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h3>
-
+                  <h3><%= pluralize(@user.errors.count, "error") %> prohibited account from being saved:</h3>
                   <ul>
                   <% @user.errors.full_messages.each do |msg| %>
                     <li class="text-danger"><%= msg %></li>
                   <% end %>
                   </ul>
                 </div>
+              </div>
               <% end %>
                 <div class="col-lg-5">
                   <div class="bs-example">
@@ -162,7 +163,7 @@
                     <div class="form-group">
                       <label class="col-sm-4 control-label" for="personal-site" align="right">Personal Website</label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" name="user[website]" id="personal-site" value="none" ><br>
+                        <input type="text" class="form-control" name="user[website]" id="personal-site" value=""><br>
                       </div>
                     </div>
 
@@ -234,7 +235,7 @@
                     <div class="form-group">
                       <label class="col-sm-4 control-label" align="right">Confirm Password</label>
                       <div class="col-sm-8">
-                        <input id="password_confirmation" type="password" name="password" placeholder="Confirm Password" class="form-control" name="user[password_confirmation]" ><br>
+                        <input id="password_confirmation" type="password" name="password" placeholder="Confirm Password" class="form-control"><br>
                       </div>
                     </div>
 
