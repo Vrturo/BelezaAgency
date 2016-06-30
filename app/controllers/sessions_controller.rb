@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
 
+  def new
+  end
+
   def create
     # authorized_user = User.authenticate(params[:email],params[:password])
     @user = User.find_by(email: params[:email])
@@ -10,7 +13,7 @@ class SessionsController < ApplicationController
     else
       flash[:notice] = "Invalid Username or Password"
       flash[:color]= "invalid"
-      render "login"
+      redirect_to "/login", alert: "Invalid Username or Password"
     end
   end
 

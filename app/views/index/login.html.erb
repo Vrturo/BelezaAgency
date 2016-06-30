@@ -20,7 +20,7 @@
                           </div>
                           </div>
                           <div class="l-form-2-bottom">
-                          <form role="form" action="/sessions" method="post">
+                          <form action="/sessions" method="post">
                               <div class="form-group">
                               <label class="sr-only">Username</label>
                                 <input type="text" name="email" placeholder="Username..." class="l-form-2-username form-control" id="l-form-2-username">
@@ -35,7 +35,11 @@
                         </div>
                       </div>
                       <div class="col-sm-6 l-form-2-box l-form-2-box-text wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                        <p class="medium-paragraph" style="width:700px"><p>
+                        <% if flash.alert %>
+                            <div class="notice"><%= flash.alert %></div>
+                        <% end %>
+                        <p class="medium-paragraph" style="width:700px">
+                        </p>
                       </div>
                   </div>
                </div>

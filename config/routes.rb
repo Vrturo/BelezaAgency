@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'index#login'
 
-  get "log_out" => "sessions#destroy", :as => "log_out"
+  get '/logout' => "sessions#destroy", :as => "log_out"
 
 
   # Example of regular route:
