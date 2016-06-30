@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    @user = User.find(session[:user_id])
     @users = User.all
   end
 
