@@ -80,6 +80,7 @@ class UsersController < ApplicationController
                                     :height, :age, :shirt_size, :dress_size,
                                     :pant_size, :shoe_size, :website, :address,
                                     :city, :state, :zip_code, :phone_number,
-                                    :photo_one, :photo_two, :photo_three, :photo_four)
+                                    :photo_one, :photo_two, :photo_three, :photo_four,
+                                    :resume)
     end
 end
