@@ -14,7 +14,7 @@
      <div class="e-divider-4"></div>
      <div class="row">
         <div class="col-md-4">
-          <%= image_tag @user.photo_one.url%>
+          <img src=<%=@user.photo_one.url%> style="width: 320px; height: 360px" class="img-responsive">
 
            <div class="e-divider-4"></div>
            <ul class="jobinfo">
@@ -109,10 +109,18 @@
              <i class="pe-7s-photo"></i>
              <h3 class="font-accident-two-normal e-uppercase">Photos</h3>
              <div class="e-divider-2"></div>
-             <%= image_tag @user.photo_one.url(:original, false) %>
-             <%= image_tag @user.photo_two.url(:original, false) %>
-             <%= image_tag @user.photo_three.url(:original, false) %>
-             <%= image_tag @user.photo_four.url(:original, false) %>
+             <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
+               <img src=<%=@user.photo_one.url%> class="img-responsive">
+             </a>
+             <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
+               <img src=<%=@user.photo_two.url%> class="img-responsive">
+             </a>
+             <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
+               <img src=<%=@user.photo_three.url%> class="img-responsive">
+             </a>
+             <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
+               <img src=<%=@user.photo_four.url%> class="img-responsive">
+             </a>
           </div>
         </div>
      </div>
