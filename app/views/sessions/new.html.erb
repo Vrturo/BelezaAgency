@@ -20,7 +20,8 @@
                           </div>
                           </div>
                           <div class="l-form-2-bottom">
-                          <form action="/sessions" method="post">
+                          <!-- <form action="/sessions" method="post"> -->
+                          <%= form_tag sessions_path do %>
                               <div class="form-group">
                               <label class="sr-only">Username</label>
                                 <input type="text" name="email" placeholder="Username..." class="l-form-2-username form-control" id="l-form-2-username">
@@ -30,6 +31,7 @@
                                 <input type="password" name="password" placeholder="Password..." class="l-form-2-password form-control" id="l-form-2-password">
                               </div>
                               <button type="submit" class="btn btn-danger">Sign in!</button><br><br>
+                            <% end%>
                               <p>Dont have an account?  <a href="/users/new"><b>Sign up!</b></a><p>
                           </form>
                         </div>

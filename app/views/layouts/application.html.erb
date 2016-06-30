@@ -83,9 +83,9 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <nav class="collapse navbar-collapse navbar-ex1-collapse">
                        <ul class="nav navbar-nav navbar-right">
-                       <% if current_user %>
+                       <% if session[:user_id] %>
                             <li><a>Welcome <%= User.find(session[:user_id]).first_name %>!</a></li>
-                            <li><%= link_to("Logout", :controller => "sessions", :action => 'destroy') %></li>
+                            <li><%= link_to "Log out", log_out_path %></li>
                         <% end %>
                           <!-- <li><a href="/">Home</a></li>
                           <li><a href="/about">About</a></li>
