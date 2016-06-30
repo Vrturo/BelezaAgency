@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+
   end
 
   # GET /users/new
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
        if @user.save
+          session[:user_id] = @user.id
           # Tell the UserMailer to send a welcome email after save
           # UserMailer.welcome_email(@user).deliver_later
 

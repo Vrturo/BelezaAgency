@@ -83,6 +83,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <nav class="collapse navbar-collapse navbar-ex1-collapse">
                        <ul class="nav navbar-nav navbar-right">
+                       <% if session[:user_id] != nil %>
+                            <li><a>Welcome <%= User.find(session[:user_id]).first_name %>!</a></li>
+                            <li><a>Log out</a></li>
+                        <% end %>
                           <!-- <li><a href="/">Home</a></li>
                           <li><a href="/about">About</a></li>
                           <li><a href="/contact">Contact</a></li>
