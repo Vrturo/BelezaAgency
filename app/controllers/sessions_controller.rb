@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
     if @user.password == params[:password]
       session[:user_id] = @user.id
-      redirect_to controller: "users", action: "show", id: user.id
+      redirect_to controller: "users", action: "show", id: @user.id
     else
       flash[:notice] = "Invalid Username or Password"
       flash[:color]= "invalid"
@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
   def destroy
       session[:user_id] = nil
       flash[:notice] = "You are now logged out"
-      redirect_to root_url
+      redirect_to "/"
     end
 end

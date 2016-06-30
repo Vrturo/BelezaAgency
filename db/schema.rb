@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160629193753) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_hash"
     t.date     "dob"
     t.string   "gender"
     t.string   "language_one"
