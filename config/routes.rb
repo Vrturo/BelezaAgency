@@ -15,7 +15,8 @@ Rails.application.routes.draw do
 
   get '/contact' => 'index#contact'
 
-  get '/join' => 'index#join'
+  get '/login' => 'index#login'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
