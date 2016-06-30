@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   layout "application"
+  protect_from_forgery
 
   def new
   end
@@ -12,9 +13,8 @@ class SessionsController < ApplicationController
 
           redirect_to @user
         else
-          flash[:notice] = "Invalid Username or Password"
-          flash[:color]= "invalid"
-          redirect_to "/login", alert: "Invalid Username or Password"
+          flash.now.alert = "Invalid Email or Password"
+          render "new"
        end
   end
 

@@ -35,10 +35,17 @@
                         </div>
                       </div>
                       <div class="col-sm-6 l-form-2-box l-form-2-box-text wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                        <% if flash.alert %>
-                            <div class="notice"><%= flash.alert %></div>
-                        <% end %>
+                          <% if flash.alert %>
+                            <div class="alert alert-danger">
+                              <div class="center-text" id="error_explanation">
+                                <ul>
+                                  <li class="text-danger"><h1><%= flash.alert %></h1></li>
+                                </ul>
+                              </div>
+                            </div>
+                          <% end %>
                         <p class="medium-paragraph" style="width:700px">
+                        </div>
                         </p>
                       </div>
                   </div>
