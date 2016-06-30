@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
     validates :email, uniqueness: true
 
-    has_attached_file :photo_one, :default_url => '/images/:attachment/missing_:style.png'
+    has_attached_file :photo_one, :default_url => "missing.png"
     has_attached_file :photo_two
     has_attached_file :photo_three
     has_attached_file :photo_four
