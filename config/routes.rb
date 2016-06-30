@@ -6,17 +6,19 @@ Rails.application.routes.draw do
   root 'index#index'
 
   resources :users
+  resources :sessions
 
 
   get '/about' => 'index#about'
 
   get '/contact' => 'index#contact'
 
+  get '/login' => 'index#login'
+
+  get "login_attempt" => "sessions#login_attempt"
+
   get "log_out" => "sessions#destroy", :as => "log_out"
 
-  resources :sessions
-
-  get '/login' => 'index#login'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

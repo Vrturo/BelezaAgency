@@ -17,4 +17,19 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :photo_three, :content_type => /\Aimage\/.*\Z/
   validates_attachment_content_type :photo_four, :content_type => /\Aimage\/.*\Z/
   validates_attachment :resume, :content_type => { :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document) }
+
+  def self.authenticate(email, login_password)
+      user = User.find_by(email: email)
+
+      if user && user.match_password(login_password)
+        return user
+      else
+        return false
+      end
+
+      def match_password(login_password="")
+        encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
+      end
+  end
+
 end

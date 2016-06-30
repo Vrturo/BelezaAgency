@@ -13,14 +13,15 @@
                       <div class="col-sm-6 l-form-2-box wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
                         <div class="l-form-2-top">
                           <div class="l-form-2-top-left">
-                            <h3>Login to our site</h3>
+                            <h3>Login to Beleza</h3>
                                 <p>Enter your username and password to log on:</p>
                           </div>
                           <div class="l-form-2-top-right">
                           </div>
                           </div>
                           <div class="l-form-2-bottom">
-                          <form role="form" action="" method="post">
+                            <%= form_tag(action: 'login_attempt', controller: "sessions") do %>
+                          <!-- <form role="form" action="" method="post"> -->
                               <div class="form-group">
                               <label class="sr-only" for="l-form-2-username">Username</label>
                                 <input type="text" name="l-form-2-username" placeholder="Username..." class="l-form-2-username form-control" id="l-form-2-username">
@@ -29,18 +30,16 @@
                                 <label class="sr-only" for="l-form-2-password">Password</label>
                                 <input type="password" name="l-form-2-password" placeholder="Password..." class="l-form-2-password form-control" id="l-form-2-password">
                               </div>
-                              <button type="submit" class="btn">Sign in!</button><br><br>
+                              <button type="submit" class="btn btn-danger">Sign in!</button><br><br>
                               <p>Dont have an account?  <a href="/users/new"><b>Sign up!</b></a><p>
-                          </form>
+                          <!-- </form> -->
+                          <% end %>
                         </div>
                       </div>
                       <div class="col-sm-6 l-form-2-box l-form-2-box-text wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                        <h3>Beleza Agency</h3>
-                        <p class="medium-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                          Ut wisi enim ad minim veniam, quis nostrud.</p>
+                        <p class="medium-paragraph" style="width:700px"><p>
                       </div>
                   </div>
-
                </div>
             </div>
          </div>
