@@ -611,13 +611,13 @@ section {
   background-color: rgba(255, 255, 255, 0.3); }
 
 #blog-hero-image::before {
-  background: url("../images/backgrounds/08.jpg") no-repeat center center;
+  background: url("../imgs/nude_purse.jpeg") no-repeat center center;
   background-size: cover; }
 #blog-hero-image .layer {
   background-color: rgba(255, 255, 255, 0.2); }
 
 #contact-hero-image::before {
-  background: url("../images/backgrounds/09.jpg") no-repeat center center;
+  background: url("../imgs/black_swan.jpeg") no-repeat center center;
   background-size: cover; }
 #contact-hero-image .layer {
   background-color: rgba(255, 255, 255, 0.2); }
