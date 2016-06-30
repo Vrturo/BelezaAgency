@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
-
- resources :attachments
-
-
-  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'index#index'
 
+  resources :users
+
 
   get '/about' => 'index#about'
 
   get '/contact' => 'index#contact'
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+
+  resources :sessions
 
   get '/login' => 'index#login'
 

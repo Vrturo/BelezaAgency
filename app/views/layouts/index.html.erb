@@ -85,7 +85,7 @@
                        <ul class="nav navbar-nav navbar-right">
                        <% if session[:user_id] != nil %>
                             <li><a>Welcome <%= User.find(session[:user_id]).first_name %>!</a></li>
-                            <li><a>Log out</a></li>
+                            <li><%= link_to("Logout", :controller => "sessions", :action => 'destroy') %></li>
                         <% end %>
                           <!-- <li><a href="/">Home</a></li>
                           <li><a href="/about">About</a></li>
