@@ -3,17 +3,17 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'index#index'
+  root 'application#index'
 
   resources :users
   resources :sessions
 
 
-  get '/about' => 'index#about'
+  get '/about' => 'application#about'
 
-  get '/contact' => 'index#contact'
+  get '/contact' => 'application#contact'
 
-  get '/login' => 'index#login'
+  get "/login" => "sessions#new", :as => "log_in"
 
   get '/logout' => "sessions#destroy", :as => "log_out"
 

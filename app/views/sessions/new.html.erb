@@ -1,0 +1,51 @@
+
+
+          <!-- Content Sections -->
+<div id="content">
+   <!-- Hero Image -->
+   <section id="blog-hero-image">
+      <div class="layer"></div>
+      <div class="container-fluid hero-wrapper">
+         <div class="row text-right">
+            <div class="col-md-12">
+               <div class="hero-text">
+                  <div class="row">
+                      <div class="col-sm-6 l-form-2-box wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+                        <div class="l-form-2-top">
+                          <div class="l-form-2-top-left">
+                            <h3>Login to Beleza</h3>
+                                <p>Enter your username and password to log on:</p>
+                          </div>
+                          <div class="l-form-2-top-right">
+                          </div>
+                          </div>
+                          <div class="l-form-2-bottom">
+                          <form action="/sessions" method="post">
+                              <div class="form-group">
+                              <label class="sr-only">Username</label>
+                                <input type="text" name="email" placeholder="Username..." class="l-form-2-username form-control" id="l-form-2-username">
+                              </div>
+                              <div class="form-group">
+                                <label class="sr-only">Password</label>
+                                <input type="password" name="password" placeholder="Password..." class="l-form-2-password form-control" id="l-form-2-password">
+                              </div>
+                              <button type="submit" class="btn btn-danger">Sign in!</button><br><br>
+                              <p>Dont have an account?  <a href="/users/new"><b>Sign up!</b></a><p>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 l-form-2-box l-form-2-box-text wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <% if flash.alert %>
+                            <div class="notice"><%= flash.alert %></div>
+                        <% end %>
+                        <p class="medium-paragraph" style="width:700px">
+                        </p>
+                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+ </div>
+
