@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
 
-  def login_attempt
+  def create
     authorized_user = User.authenticate(params[:email],params[:password])
+    user = User.find_by(email: params[:email])
+
     if authorized_user
-      redirect_to(:action => 'users#show')
+      redirect_to controller: "users", action: "show", id: user.id
     else
       flash[:notice] = "Invalid Username or Password"
       flash[:color]= "invalid"

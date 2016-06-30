@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   get '/login' => 'index#login'
 
-  get "login_attempt" => "sessions#login_attempt"
-
   get "log_out" => "sessions#destroy", :as => "log_out"
 
 

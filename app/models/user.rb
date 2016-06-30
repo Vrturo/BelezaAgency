@@ -21,13 +21,13 @@ class User < ActiveRecord::Base
   def self.authenticate(email, login_password)
       user = User.find_by(email: email)
 
-      if user && user.match_password(login_password)
+      if user.password == login_password
         return user
       else
         return false
       end
 
-      def match_password(login_password="")
+      def self.match_password(login_password)
         encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
       end
   end
