@@ -1,4 +1,8 @@
-
+<% if session[:user_id] == nil || @user.email != ENV['ADMIN_EMAIL_ONE'] %>
+  <script type="text/javascript">
+    window.location.href="/";
+  </script>
+<% end %>
 
 <!-- Hero Image -->
  <section id="portfolio-hero-image">
