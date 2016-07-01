@@ -1,4 +1,4 @@
-<% if session[:user_id] == nil || @user.email != ENV['ADMIN_EMAIL_ONE'] %>
+<% if !@user.admin %>
   <script type="text/javascript">
     window.location.href="/";
   </script>
