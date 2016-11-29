@@ -11,9 +11,7 @@
 <body>
   <!--Pre-Loader-->
   <div id="preloader"><img src=<%= asset_path ("preloader.gif")%> alt="01"></div>
-
   <div id="wrapper" class="sidebar-left">
-
      <a href="#menu-toggle" class="" id="menu-toggle"><span class="" aria-hidden="true"></span></a>
 
      <!-- Sidebar -->
@@ -36,13 +34,7 @@
               Tel: 1 234 345 45 35
            </p> -->
            <div>
-              <a href="#!"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-              <a href="#!"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-              <a href="#!"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
-              <a href="#!"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a>
-              <a href="#!"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
-              <a href="#!"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-              <a href="#!"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/belezaagency"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
            </div>
         </div>
      </div>
@@ -73,21 +65,14 @@
                             <li><a>Welcome <%= User.find(session[:user_id]).first_name %>!</a></li>
                             <li><%= link_to "Log out", log_out_path %></li>
                         <% end %>
-                          <!-- <li><a href="/">Home</a></li>
-                          <li><a href="/about">About</a></li>
-                          <li><a href="/contact">Contact</a></li>
-                          <li><a href="/users/new">Join!</a></li> -->
                        </ul>
                     </nav><!-- /.navbar-collapse -->
                  </div>
               </div>
            </div>
-        </header>
-        <!-- / Header -->
+        </header> <!-- / Header -->
             <%= yield %>
-
-    </div>
-    <!-- / Content -->
+    </div> <!-- / Content -->
   <div id="image-cache" class="hidden"></div>
 </body>
 </html>
