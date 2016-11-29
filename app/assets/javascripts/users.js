@@ -16,3 +16,5 @@
 //= require turbolinks
 //= require lib_folder
 //= require extensions_folder
+//= require script
+//= require validation
