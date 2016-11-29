@@ -5,13 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
    <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path 'logo.png' %>" />
-  <link href="fonts/font-awesome.min.css" property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
   <!--Pre-Loader-->
-  <div id="preloader"><img src="preloader.gif" alt="01"></div>
+  <div id="preloader"><img src=<%= asset_path ("preloader.gif")%> alt="01"></div>
 
   <div id="wrapper" class="sidebar-left">
 
