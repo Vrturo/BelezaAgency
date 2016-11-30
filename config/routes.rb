@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
-
+  resources "contacts", only: [:new, :create]
 
   get '/about' => 'application#about'
 
