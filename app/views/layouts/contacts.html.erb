@@ -1,1 +1,78 @@
-contacts.html.erb
+<!DOCTYPE html>
+<html>
+<head>
+<title>Beleza Agency</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path 'logo.png' %>" />
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <!--Pre-Loader-->
+  <div id="preloader"><img src=<%= asset_path ("preloader.gif")%> alt="01"></div>
+  <div id="wrapper" class="sidebar-left">
+     <a href="#menu-toggle" class="" id="menu-toggle"><span class="" aria-hidden="true"></span></a>
+
+     <!-- Sidebar -->
+     <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+           <li class="e-divider-4"></li>
+           <li class="sidebar-brand">
+              <a href="#"><img src=<%= asset_path ("beleza-logo-light.png")%> width="180" alt="logo"></a>
+           </li>
+           <li class="e-divider-4"></li>
+           <li><a href="/" class="current" data-no-turbolink>Home</a></li>
+           <!-- <li><a href="/about">About</a></li> -->
+           <li><a href="/contact" data-no-turbolink>Contact</a></li>
+           <li><a href="/users/new" data-no-turbolink>Join</a></li>
+        </ul>
+        <div class="e-divider-4"></div>
+        <div class="bottom-widget">
+           <!-- <p class="small color04">
+              California USA<br>
+              Tel: 1 234 345 45 35
+           </p> -->
+           <div>
+              <a href="https://www.facebook.com/belezaagency"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+           </div>
+        </div>
+     </div>
+     <!-- /#sidebar-wrapper -->
+
+     <!-- Content -->
+     <div id="page-content-wrapper" class="content-wrap">
+
+        <!-- Header -->
+        <header class="cbp-af-header toggled">
+           <div class="cbp-af-inner">
+              <div class="navbar navbar-default" role="navigation">
+                 <div class="container-fluid padding-side-50">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                       <h1><a href="/" data-no-turbolink>Beleza</a></h1>
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                       </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <nav class="collapse navbar-collapse navbar-ex1-collapse">
+                       <ul class="nav navbar-nav navbar-right">
+                       <% if session[:user_id] %>
+                            <li><a>Welcome <%= User.find(session[:user_id]).first_name %>!</a></li>
+                            <li><%= link_to "Log out", log_out_path %></li>
+                        <% end %>
+                       </ul>
+                    </nav><!-- /.navbar-collapse -->
+                 </div>
+              </div>
+           </div>
+        </header> <!-- / Header -->
+            <%= yield %>
+    </div> <!-- / Content -->
+  <div id="image-cache" class="hidden"></div>
+</body>
+</html>
