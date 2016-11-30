@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629193753) do
+ActiveRecord::Schema.define(version: 20161130054537) do
 
   create_table "users", force: :cascade do |t|
     t.boolean  "admin",                    default: false
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160629193753) do
     t.string   "resume_content_type"
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
+    t.string   "username"
   end
 
 end
