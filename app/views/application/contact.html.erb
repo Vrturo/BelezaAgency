@@ -31,7 +31,7 @@
             </p>
          </div>
          <div class="e-divider-4"></div>
-         <%= simple_form_for @contact do |f| %>
+         <%= form_for(@contact, multipart: true) do |f| %>
             <% if @contact.errors.any? %>
                  <div class="alert alert-danger">
                    <div class="center-text" id="error_explanation">
