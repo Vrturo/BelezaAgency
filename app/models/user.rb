@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
     validates_confirmation_of :password
 
     validates :email, uniqueness: true
+    validates :username, uniqueness: true
 
     has_attached_file :photo_one
     has_attached_file :photo_two
