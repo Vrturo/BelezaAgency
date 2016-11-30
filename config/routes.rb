@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get '/about' => 'application#about'
 
-  get '/contact' => 'application#contact'
+  get '/contact' => 'contacts#new'
 
   get "/login" => "sessions#new", :as => "log_in"
 
