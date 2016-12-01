@@ -34,8 +34,8 @@
                         </div>
                      </div>
                      <div class="img-wrap">
-                        <a href="#!" class="popup-modal">
-                           <img class="img-responsive" src=<%=@user.photo_one.url%> alt="">
+                        <a class="fancybox" rel="gallery1" href=<%=@user.photo_four.url%> >
+                          <img src=<%=@user.photo_four.url%>  alt="" />
                         </a>
                      </div>
                   </article>
@@ -54,23 +54,6 @@
                            Posted on: <a href="#!" class="meta-date"><%=@user.photo_two_updated_at.to_date%></a>&nbsp;
                         </div>
                      </div>
-                     <div class="img-wrap">
-                           <!-- Trigger the Modal -->
-                          <img id="myImg" src=<%=@user.photo_two.url%> alt="Trolltunga, Norway" width="300" height="200">
-
-                          <!-- The Modal -->
-                          <div id="myModal" class="modal">
-
-                            <!-- The Close Button -->
-                            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-
-                            <!-- Modal Content (The Image) -->
-                            <img class="modal-content" id="img01">
-
-                            <!-- Modal Caption (Image Text) -->
-                            <div id="caption"></div>
-                          </div>
-                     </div>
                   </article>
                </div> <!--/row-->
                <div class="e-divider-8"></div>
@@ -87,8 +70,8 @@
                         </div>
                      </div>
                      <div class="img-wrap">
-                        <a href="blogpost.html">
-                           <img class="img-responsive" src=<%=@user.photo_three.url%> alt="">
+                        <a class="fancybox" rel="gallery1" href=<%=@user.photo_four.url%> >
+                          <img src=<%=@user.photo_four.url%>  alt="" />
                         </a>
                      </div>
                   </article>
@@ -107,8 +90,8 @@
                         </div>
                      </div>
                      <div class="img-wrap">
-                        <a href="blogpost.html">
-                           <img class="img-responsive" src=<%=@user.photo_four.url%> alt="">
+                        <a class="fancybox" rel="gallery1" href=<%=@user.photo_four.url%> >
+                          <img src=<%=@user.photo_four.url%>  alt="" />
                         </a>
                      </div>
                   </article>
@@ -120,33 +103,19 @@
 
          </div>
       </div> <!--/Container-->
-    <div class="offset-md-2 col-md-8">
-        <div class="row">
-            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
-            </a>
-        </div>
-        <div class="row">
-            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-            </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
-            </a>
-        </div>
-    </div>
-</div>
 
 
    </section> <!-- /Blog Block -->
-
 </div> <!-- /Content Sections -->
+
+
+<%= javascript_tag do %>
+    $(".fancybox").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none',
+    minHeight   : 500,
+    minWidth    :  500,
+    maxHeight   : 700,
+    maxWidth    :  700
+  });
+<% end %>
