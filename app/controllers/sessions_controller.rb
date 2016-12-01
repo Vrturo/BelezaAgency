@@ -3,10 +3,11 @@ class SessionsController < ApplicationController
   protect_from_forgery
 
   def new
+
   end
 
   def create
-    @user = User.find_by(email: params[:email])
+    @user = User.find_by(email: params[:email].downcase)
 
        if @user.email && @user.password == params[:password]
           session[:user_id] = @user.id

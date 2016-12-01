@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    params[:username].downcase
+    @user.downcase_fields
 
     respond_to do |format|
        if @user.save
@@ -81,6 +81,7 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       # params.require(:user).permit(:name, :email, :login)
+
       params.require(:user).permit( :first_name, :last_name, :email, :password, :username,
                                     :dob, :gender, :language_one, :language_two,
                                     :height, :age, :shirt_size, :dress_size,
@@ -89,4 +90,5 @@ class UsersController < ApplicationController
                                     :photo_one, :photo_two, :photo_three, :photo_four,
                                     :resume)
     end
+
 end
