@@ -19,3 +19,4 @@
 //= require_self
 //= require script
 //= require validation
+//= require lightbox

@@ -3,14 +3,12 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
-  # GET /users.json
   def index
     @user = User.find(session[:user_id])
     @users = User.all
   end
 
   # GET /users/1
-  # GET /users/1.json
   def show
     @user = User.find(params[:id])
   end
@@ -91,5 +89,4 @@ class UsersController < ApplicationController
                                     :photo_one, :photo_two, :photo_three, :photo_four,
                                     :resume)
     end
-    # self.username.downcase!
 end
