@@ -4,11 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
 
-  # GET /username
-  def show
-    @user = User.find(params[:username])
-  end
-
   private
 
   def current_user
