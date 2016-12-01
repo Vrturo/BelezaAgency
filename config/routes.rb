@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'application#index'
 
-  resources :application, only: [:show]
   resources :users
   resources :sessions
   resources "contacts", only: [:new, :create]
@@ -17,6 +16,8 @@ Rails.application.routes.draw do
   get "/login" => "sessions#new", :as => "log_in"
 
   get '/logout' => "sessions#destroy", :as => "log_out"
+
+  get '/:username' => 'users#profile', :constrain => { :username => /[a-zA-Z-]+/ }
 
 
   # Example of regular route:
