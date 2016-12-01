@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   # GET /username
   def profile
-    @user = User.find_by(username: params[:username])
+    @user = User.find_by(username: params[:username].downcase)
   end
 
   # GET /users/new
@@ -35,12 +35,11 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    params[:username].downcase
 
     respond_to do |format|
        if @user.save
           session[:user_id] = @user.id
-          # Tell the UserMailer to send a welcome email after save
-          # UserMailer.welcome_email(@user).deliver_later
 
           format.html { redirect_to(@user) }
           format.json { render json: @user, status: :created, location: @user }
@@ -92,4 +91,5 @@ class UsersController < ApplicationController
                                     :photo_one, :photo_two, :photo_three, :photo_four,
                                     :resume)
     end
+    # self.username.downcase!
 end
