@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get '/logout' => "sessions#destroy", :as => "log_out"
 
-  get '/:username' => 'users#profile', :constrain => { :username => /[a-zA-Z-]+/ }
+  get '/:username' => 'users#profile'
 
 
   # Example of regular route:

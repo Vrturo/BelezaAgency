@@ -15,6 +15,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  # GET /username
+  def profile
+    @user = User.find_by(username: params[:username])
+  end
+
   # GET /users/new
   def new
     @user = User.new
