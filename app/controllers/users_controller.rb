@@ -52,11 +52,19 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
       if @user.update(user_params)
-        edirect_to @user, notice: 'User was successfully updated.'
+        redirect_to @user, notice: 'User was successfully updated.'
       else
         flash.now.alert = "could not upload successfully"
         render :edit
       end
+  end
+
+  def delete_file
+    @user = User.find(params[:id])
+    @user.resume.destroy #Will remove the attachment and save the model
+    @user.resume.clear #Will queue the attachment to be deleted
+    @user.save
+    redirect_to @user
   end
 
   # DELETE /users/1

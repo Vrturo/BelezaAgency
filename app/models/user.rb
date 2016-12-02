@@ -21,9 +21,7 @@ class User < ActiveRecord::Base
     validates_attachment_content_type :photo_two, :content_type => /\Aimage\/.*\Z/
     validates_attachment_content_type :photo_three, :content_type => /\Aimage\/.*\Z/
     validates_attachment_content_type :photo_four, :content_type => /\Aimage\/.*\Z/
-    validates_attachment :resume, :content_type => { :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document) }
-
-
+    validates_attachment_content_type :resume,  :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document)
 
   def downcase_fields
       self.email.downcase!
