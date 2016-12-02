@@ -6,17 +6,17 @@
             <h1 class="font-accident-two-normal e-uppercase text-center text-danger">Sign Up!</h1>
              <h4 class="center-text" >Have an account?  <a href="/login"><b>Log in!</b></a></h4>
             <div class="e-divider-1"></div>
-            <% if target.errors.any? %>
+            <% if @user.errors.any? %>
               <div class="alert alert-danger">
                 <div class="center-text" id="error_explanation">
-                  <h2><%= pluralize(target.errors.count, "error") %> prevented this record from being saved:</h2>
+                  <h4><%= pluralize(@user.errors.count, "error") %> prevented this record from being saved:</h4>
                   <ul>
-                    <% target.errors.full_messages.each do |msg| %>
+                    <% @user.errors.full_messages.each do |msg| %>
                       <li><%= msg %></li>
                     <% end %>
-                </ul>
+                  </ul>
+                </div>
               </div>
-            </div>
             <% end %>
             <%= form_for(@user, multipart: true) do |f| %>
               <h5> <strong>(*)</strong> required</h5>
