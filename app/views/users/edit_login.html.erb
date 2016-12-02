@@ -1,1 +1,65 @@
-edit_login.html.erb
+<div id="content">
+   <!-- Testmonials Block -->
+   <section id="testmonials" class="e-block-short">
+      <div class="container-fluid padding-side-50">
+         <div>
+            <h1 class="font-accident-two-normal e-uppercase text-center text-danger">Editing Login Information</h1>
+            <div class="e-divider-1"></div>
+            <%= simple_form_for(@user) do |f| %>
+              <% if @user.errors.any? %>
+              <div class="alert alert-danger">
+                <div class="center-text" id="error_explanation">
+                  <h3><%= pluralize(@user.errors.count, "error") %> prohibited account from being saved:</h3>
+                  <ul>
+                  <% @user.errors.full_messages.each do |msg| %>
+                    <li class="text-danger"><%= msg %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              </div>
+              <% end %>
+                <div class="col-lg-5">
+                  <div class="bs-example">
+                    <input type="hidden"  class="base_url">
+
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" align="right">Email Address</label>
+                        <div class="col-sm-8">
+                          <input type="email" name="user[email]" class="form-control" required><br>
+                          <!-- <span style="color:red;display:none;" class="notavailable">Login ID is not available</span>
+                          <span style="color:green;display:none;" class="available">Login ID is available</span><br> -->
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" align="right">Password</label>
+                        <div class="col-sm-8">
+                          <input id="password" type="password" placeholder="Password" name="user[password]" class="form-control" required><br>
+                        </div>
+                      </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label" align="right">Confirm Password</label>
+                      <div class="col-sm-8">
+                        <input id="confirm_password" type="password" placeholder="Confirm Password" class="form-control"><br>
+                      </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <input type="submit" class="btn btn-danger" value="Submit" >
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              <!-- </form> -->
+            <% end %>
+         </div>
+         <div class="e-divider-8"></div>
+      </div>
+   </section> <!-- /Testmonials Block -->
+</div>
+

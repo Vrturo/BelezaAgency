@@ -29,6 +29,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def edit_login
+    @user = User.find(params[:id])
+  end
+
   # POST /users
   # POST /users.json
   def create
