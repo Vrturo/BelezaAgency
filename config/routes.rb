@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get '/users/:id/file' => "users#delete_file", as: "delete_file"
 
+  get '/users/:id/editlogin' => "users#edit_login", as: "edit_login"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
