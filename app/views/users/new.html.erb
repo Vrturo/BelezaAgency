@@ -6,14 +6,17 @@
             <h1 class="font-accident-two-normal e-uppercase text-center text-danger">Sign Up!</h1>
              <h4 class="center-text" >Have an account?  <a href="/login"><b>Log in!</b></a></h4>
             <div class="e-divider-1"></div>
-            <% if flash.alert %>
+            <% if target.errors.any? %>
               <div class="alert alert-danger">
                 <div class="center-text" id="error_explanation">
+                  <h2><%= pluralize(target.errors.count, "error") %> prevented this record from being saved:</h2>
                   <ul>
-                    <li class="text-danger"><h1><%= flash.alert %></h1></li>
-                  </ul>
-                </div>
+                    <% target.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                </ul>
               </div>
+            </div>
             <% end %>
             <%= form_for(@user, multipart: true) do |f| %>
               <h5> <strong>(*)</strong> required</h5>

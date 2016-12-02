@@ -63,6 +63,16 @@ class UsersController < ApplicationController
       end
   end
 
+  def update_login
+      @user = User.find(params[:id])
+      if @user.update(user_params)
+        redirect_to @user, notice: 'User was successfully updated.'
+      else
+        flash.now.alert = "could not upload successfully"
+        render :edit_login
+      end
+  end
+
   def delete_file
     @user = User.find(params[:id])
     @user.resume.destroy #Will remove the attachment and save the model

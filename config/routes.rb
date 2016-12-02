@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   get '/users/:id/editlogin' => "users#edit_login", as: "edit_login"
 
+  post '/users/:id/updatelogin' => "users#update_login", as: "update_login"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
