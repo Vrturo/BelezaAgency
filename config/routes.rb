@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get '/:username' => 'users#profile'
 
-  get '/users/:id/file' => "users#delete_file"
+  get '/users/:id/file' => "users#delete_file", as: "delete_file"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

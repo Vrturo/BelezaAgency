@@ -32,7 +32,7 @@
                  <iframe src=<%=@user.resume%> style="height:35em;" frameborder="0"></iframe>
                   <div class="col-sm-offset-1">
                     <a class="btn btn-danger view-pdf" target="_blank" href="<%=@user.resume%>">View Resume</a>
-                    <a class="btn btn-danger view-pdf" href="/users/<%=@user.id%>/file">Delete Resume</a>
+                    <%= link_to 'Delete Resume', delete_file_path, method: :get, class: "btn btn-danger view-pdf" %>
                   </div>
             <% else %>
                 <div class="e-divider-4"></div>
