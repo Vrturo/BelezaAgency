@@ -28,7 +28,7 @@
             Resume
           </h3>
            <div class="e-divider-2"></div>
-            <embed src=<%=@user.resume%>>
+           <iframe src=<%=@user.resume%> style="height:35em;" frameborder="0"></iframe>
               <% if @user.resume_file_size != nil %>
                 <a class="btn btn-danger view-pdf" target="_blank" href="<%=@user.resume%>">View Resume</a>
               <% end %>
