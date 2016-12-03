@@ -16,5 +16,4 @@
 //= require turbolinks
 //= require lib_folder
 //= require extensions_folder
-//= require_self
 //= require script
