@@ -9,9 +9,9 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email: params[:email])
     if !@user
-      @user = User.find_by(email: params[:email].downcase)
-
-    if @user.email.downcase == params[:user][:email].downcase && @user.password == params[:password]
+        @user = User.find_by(email: params[:email].downcase)
+    end
+    if @user.email.downcase == params[:email].downcase && @user.password == params[:password]
         session[:user_id] = @user.id
         redirect_to @user
     else
@@ -23,5 +23,5 @@ class SessionsController < ApplicationController
   def destroy
       session[:user_id] = nil
       redirect_to '/'
-    end
+  end
 end
