@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'application#index'
 
   resources :users
-  resources :sessions
+  resources :sessions, only: [:new, :create]
   resources "contacts", only: [:new, :create]
 
   get '/about' => 'application#about'
