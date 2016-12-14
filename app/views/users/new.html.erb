@@ -20,7 +20,7 @@
             <% end %>
             <%= form_for(@user, multipart: true) do |f| %>
               <h5> <strong>(*)</strong> required</h5>
-                <div class="col-lg-5 col-sm-12">
+                <div class="col-lg-5 col-sm-10 col-sm-12">
                   <div class="bs-example">
                     <input type="hidden"  class="base_url">
                     <div class="form-group">
@@ -79,6 +79,7 @@
                           <option value="Korean">Korean</option>
                         </select>
                       </div>
+                      <div class="e-divider-2"></div>
                       <div class="col-sm-4">
                         <select name="user[language_two]" class="form-control">
                           <option value="none">Choose One</option>
