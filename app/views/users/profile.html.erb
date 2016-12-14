@@ -8,7 +8,7 @@
          <div class="row no-sidebar">
 
             <!--Content Column-->
-            <div class="col-md-11">
+            <div class="col-md-11 col-sm-">
                <div class="row">
                   <article class="post-block col-md-12 post hentry">
                      <div class="post-detail">
@@ -39,7 +39,7 @@
                      </div>
                      <div class="img-wrap">
                         <a class="fancybox" href=<%=@user.photo_two.url%> >
-                          <img class="img-responsive" src=<%=@user.photo_three.url%>  alt="" />
+                          <img class="img-responsive" src=<%=@user.photo_two.url%>  alt="" />
                         </a>
                      </div>
                   </article>
@@ -98,9 +98,7 @@
     $(".fancybox").fancybox({
     openEffect  : 'none',
     closeEffect : 'none',
-    minHeight   : 500,
-    minWidth    :  500,
-    maxHeight   : 700,
-    maxWidth    :  700
+    height   : 400,
+    width    :  400
   });
 <% end %>
