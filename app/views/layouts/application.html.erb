@@ -60,15 +60,22 @@
                        </button>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <nav class="collapse navbar-collapse navbar-ex1-collapse">
-                       <ul class="nav navbar-nav navbar-right">
-                          <% if session[:user_id] %>
-                            <% current_user = User.find(session[:user_id]) %>
-                            <li><%= link_to "Welcome #{current_user.first_name}!", current_user, method: :get %></li>
-                            <li><%= link_to "Log out", log_out_path %></li>
-                          <% end %>
-                       </ul>
-                    </nav><!-- /.navbar-collapse -->
+                    <% if session[:user_id] %>
+                        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+                           <ul class="nav navbar-nav navbar-right">
+                                <% current_user = User.find(session[:user_id]) %>
+                                <li><%= link_to "Welcome #{current_user.first_name}!", current_user, method: :get %></li>
+                                <li><%= link_to "Log out", log_out_path %></li>
+                           </ul>
+                        </nav><!-- /.navbar-collapse -->
+                      <% else %>
+                        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+                           <ul class="nav navbar-nav navbar-right visible-xs">
+                                <li><a href="/contact" data-no-turbolink>Contact</a></li>
+                                 <li><a href="/users/new" data-no-turbolink>Join</a></li>
+                           </ul>
+                        </nav><!-- /.navbar-collapse -->
+                    <% end %>
                  </div>
               </div>
            </div>
