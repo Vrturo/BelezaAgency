@@ -7,15 +7,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:email].downcase)
+    @user = User.find_by(email: params[:email])
+    if !@user
+      @user = User.find_by(email: params[:email].downcase)
 
-       if @user.email && @user.password == params[:password]
-          session[:user_id] = @user.id
-          redirect_to @user
-        else
-          flash.now.alert = "Invalid Email or Password"
-          render "new"
-       end
+    if @user.email.downcase == params[:user][:email].downcase && @user.password == params[:password]
+        session[:user_id] = @user.id
+        redirect_to @user
+    else
+        flash.now.alert = "Invalid Email or Password"
+        render "new"
+    end
   end
 
   def destroy
