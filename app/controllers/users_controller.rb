@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   # GET /username
   def profile
     @user = User.find_by(username: params[:username].downcase)
+
   end
 
   # GET /users/new

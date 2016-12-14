@@ -1,32 +1,16 @@
 <!-- Content Sections -->
 <div id="content">
 
-   <!-- Hero Image -->
-   <section id="blog-hero-image">
-      <div class="layer"></div>
-      <div class="container-fluid hero-wrapper">
-         <div class="row text-right">
-            <div class="col-md-12">
-               <div class="hero-text">
-                  <h2 class="font-accident-two-normal"><%= @user.first_name %> <%= @user.last_name[0] %></h2>
-                  <p class="font-accident-two-normal e-uppercase letter-spacing-03">
-                     Profile page!
-                  </p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section> <!-- /Hero Image -->
-
    <!-- Blog Block -->
    <section id="blog-list" class="padding-side-50">
       <div class="e-divider-8"></div>
       <div class="container">
          <div class="row no-sidebar">
+
             <!--Content Column-->
-            <div class="col-md-12">
+            <div class="col-md-11">
                <div class="row">
-                  <article id="01" class="post-block col-md-12 post hentry">
+                  <article class="post-block col-md-12 post hentry">
                      <div class="post-detail">
                         <h2 class="entry-title"><a href="#!">1</a></h2>
                         <div class="metas">
@@ -34,8 +18,8 @@
                         </div>
                      </div>
                      <div class="img-wrap">
-                        <a class="fancybox" rel="gallery1" href=<%=@user.photo_four.url%> >
-                          <img src=<%=@user.photo_four.url%>  alt="" />
+                        <a class="fancybox" href=<%=@user.photo_one.url%> >
+                          <img class="img-responsive" src=<%=@user.photo_four.url%>  alt="" />
                         </a>
                      </div>
                   </article>
@@ -43,35 +27,19 @@
                <div class="e-divider-8"></div>
             </div> <!--/Content Column-->
 
-
             <!--Content Column-->
-            <div class="col-md-12">
+            <div class="grid-item col-md-11">
                <div class="row">
-                  <article id="02" class="post-block col-md-12 post hentry">
-                    <div class="post-detail">
+                  <article class="post-block col-md-12 post hentry">
+                     <div class="post-detail">
                         <h2 class="entry-title"><a href="#!">2</a></h2>
                         <div class="metas">
                            Posted on: <a href="#!" class="meta-date"><%=@user.photo_two_updated_at.to_date%></a>&nbsp;
                         </div>
                      </div>
-                  </article>
-               </div> <!--/row-->
-               <div class="e-divider-8"></div>
-            </div> <!--/Content Column-->
-
-            <!--Content Column-->
-            <div class="col-md-12">
-               <div class="row">
-                  <article id="03" class="post-block col-md-12 post hentry">
-                     <div class="post-detail">
-                        <h2 class="entry-title"><a href="#">3</a></h2>
-                        <div class="metas">
-                           Posted on: <a href="#!" class="meta-date"><%=@user.photo_three_updated_at.to_date%></a>&nbsp;
-                        </div>
-                     </div>
                      <div class="img-wrap">
-                        <a class="fancybox" rel="gallery1" href=<%=@user.photo_four.url%> >
-                          <img src=<%=@user.photo_four.url%>  alt="" />
+                        <a class="fancybox" href=<%=@user.photo_two.url%> >
+                          <img class="img-responsive" src=<%=@user.photo_three.url%>  alt="" />
                         </a>
                      </div>
                   </article>
@@ -80,31 +48,48 @@
             </div> <!--/Content Column-->
 
             <!--Content Column-->
-            <div class="col-md-12">
+            <div class="col-md-11">
                <div class="row">
-                  <article id="04" class="post-block col-md-12 post hentry">
+                  <article class="post-block col-md-12 post hentry">
                      <div class="post-detail">
-                        <h2 class="entry-title"><a href="#">4</a></h2>
+                        <h2 class="entry-title"><a href="#!">3</a></h2>
+                        <div class="metas">
+                           Posted on: <a href="#!" class="meta-date"><%=@user.photo_one_updated_at.to_date%></a>&nbsp;
+                        </div>
+                     </div>
+                     <div class="img-wrap">
+                        <a class="fancybox" href=<%=@user.photo_three.url%> >
+                          <img class="img-responsive" src=<%=@user.photo_three.url%>  alt="" />
+                        </a>
+                     </div>
+                  </article>
+               </div> <!--/row-->
+               <div class="e-divider-8"></div>
+            </div> <!--/Content Column-->
+
+           <!--Content Column-->
+            <div class="col-md-11">
+               <div class="row">
+                  <article class="post-block col-md-12 post hentry">
+                     <div class="post-detail">
+                        <h2 class="entry-title"><a href="#!">4</a></h2>
                         <div class="metas">
                            Posted on: <a href="#!" class="meta-date"><%=@user.photo_four_updated_at.to_date%></a>&nbsp;
                         </div>
                      </div>
                      <div class="img-wrap">
-                        <a class="fancybox" rel="gallery1" href=<%=@user.photo_four.url%> >
-                          <img src=<%=@user.photo_four.url%>  alt="" />
+                        <a class="fancybox" href=<%=@user.photo_four.url%> >
+                          <img class="img-responsive" src=<%=@user.photo_four.url%>  alt="" />
                         </a>
                      </div>
                   </article>
                </div> <!--/row-->
                <div class="e-divider-8"></div>
             </div> <!--/Content Column-->
-            <div class="row">
 
-
+          <div class="row">
          </div>
       </div> <!--/Container-->
-
-
    </section> <!-- /Blog Block -->
 </div> <!-- /Content Sections -->
 
