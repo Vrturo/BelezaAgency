@@ -1704,20 +1704,21 @@ figure.effect-goliath:hover p {
 */
 .boxxed{
   width: 285px;
-  height: 285px
-}
-
+  height: 285px;}
 .center-text{
-  text-align: center
-}
-
+  text-align: center;}
 .meta-cat {
-    display: inline-block;
-    background: #f2f2f2;
-    padding: 4px 16px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 10px;
-}
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 4px 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 10px;}
+.contact-info > li{
+  font-size: 24px;}
+.contact-info > li > .left {
+  float:left;}
+.contact-info > li > a{
+  font-size: 24px;}

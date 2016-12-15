@@ -1,7 +1,7 @@
 <!-- Content Sections -->
 <div id="content">
 
-   <!-- Hero Image -->
+   <!-- Image -->
    <section id="contact-hero-image">
       <div class="layer"></div>
       <div class="container-fluid hero-wrapper">
@@ -10,70 +10,35 @@
                <div class="hero-text">
                   <h2 class="font-accident-two-normal">Contact Us</h2>
                   <p class="font-accident-two-normal e-uppercase letter-spacing-03">
-                     Feel free to reach out with a message on the form below.
+                     Feel free to reach out with a message.
                   </p>
                </div>
             </div>
          </div>
       </div>
-   </section>
-   <!-- /Hero Image -->
+   </section> <!-- Image -->
 
    <!-- Feedback Block -->
    <section id="feedback-block" class="e-block-regular text-center bg-color01">
       <div class="container-fluid">
          <div>
-            <h3 class="font-accident-two-normal e-uppercase text-center">Drop Us a Line</h3>
+            <h3 class="font-accident-two-normal e-uppercase text-center">Give us a call!</h3>
             <div class="e-divider-1"></div>
-            <p class="small fontcolor-medium text-center">
-               Fill the form out! <br>
+            <p class="fontcolor-medium text-center">
+               Beleza Agency is always happy to answer all inqueries.<br>
             </p>
          </div>
          <div class="e-divider-4"></div>
-            <div class="row">
-               <div class="col-md-2">&nbsp;</div>
-               <div class="col-md-8 e-centered wow fadeInDown" data-wow-delay="0.6s" data-wow-offset="10">
-                  <div class="e-divider-2"></div>
-                  <div id="form-messages"></div>
-                  <%= form_for(@contact, multipart: true) do |f| %>
-                      <% if @contact.errors.any? %>
-                           <div class="alert alert-danger">
-                             <div class="center-text" id="error_explanation">
-                               <h3><%= pluralize(@contact.errors.count, "error") %> prohibited account from email being sent:</h3>
-                               <ul>
-                               <% @contact.errors.full_messages.each do |msg| %>
-                                 <li class="text-danger"><%= msg %></li>
-                               <% end %>
-                               </ul>
-                             </div>
-                           </div>
-                        <% end %>
-                     <div class="field">
-                        <input type="text" id="name" name="contact[name]" placeholder="Name" required>
-                     </div>
-                     <div class="e-divider-1"></div>
-                     <div class="field">
-                        <input type="email" id="email" name="contact[email]" placeholder="Email" required>
-                     </div>
-                     <div class="e-divider-1"></div>
-                     <div class="field">
-                        <textarea id="message" name="contact[message]" placeholder="Message" rows="7" cols="30"  required></textarea>
-                     </div>
-                     <div class="e-divider-1"></div>
-                     <div class="e-divider-2"></div>
-
-                     <div class="field text-center">
-                        <button type="submit" class="btn btn-lg btn-blk">Send Message</button>
-                     </div>
-            <% end %> <!-- </form> -->
-            </div>
-            <div class="col-md-2">&nbsp;</div>
-            <div class="col-md-12 divider-dynamic"></div>
-         </div>
+          <ul class="contact-info col-sm-offset-3 col-md-6 col-sm-5">
+              <li><span class="left"><i class="fa fa-user"></i> Ask for:</span> Limairy Molina</li>
+              <li><span class="left"><i class="fa fa-phone"></i> Phone:</span> +1 714 794 9621</li>
+              <li><span class="left"><i class="fa fa-envelope-o"></i> Email:</span><a href="mailto:molina.limairy@gmail.com?Subject=Beleza%20Inquiry" target="_top">molina.limairy@gmail.com</a></li>
+          </ul>
       </div>
+      <div class="col-md-12 divider-dynamic"></div>
       <div class="e-divider-4"></div>
-
    </section> <!-- /Feedback Block -->
+
 </div> <!-- /Content Sections -->
 
 

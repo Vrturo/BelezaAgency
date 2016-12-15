@@ -9,6 +9,9 @@
             <div class="col-md-12">
                <div class="profile-text">
                   <h2 class="font-accident-two-normal"><%=@user.first_name%> <%=@user.last_name%></h2>
+                  <p class="font-accident-two-normal e-uppercase letter-spacing-03">
+                     Contact me!
+                  </p>
                </div>
             </div>
          </div>
@@ -115,6 +118,7 @@
                             <iframe src=<%=@user.resume%> style="height:35em;" frameborder="0"></iframe>
                           </a>
                        </div>
+                          <a class="btn btn-danger view-pdf" target="_blank" href="<%=@user.resume%>">View Resume</a>
                     </article>
                  </div> <!--/row-->
                  <div class="e-divider-8"></div>
