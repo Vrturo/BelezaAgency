@@ -2,7 +2,7 @@
 <div id="content">
 
   <!-- Hero Image -->
-   <section id="profile-hero-image" style="background: url(<%=@user.photo_one.url%>) no-repeat center center; background-size: cover;">
+   <section id="profile-hero-image">
       <div class="layer"></div>
       <div class="container-fluid hero-wrapper">
          <div class="row text-right">
@@ -101,6 +101,25 @@
                </div> <!--/row-->
                <div class="e-divider-8"></div>
             </div> <!--/Content Column-->
+
+            <% if @user.resume_file_size != nil %>
+              <!--Content Column-->
+              <div class="col-md-11">
+                 <div class="row">
+                    <article class="post-block col-md-12 post hentry">
+                       <div class="post-detail">
+                          <h2 class="entry-title"><a href="#!">Resume</a></h2>
+                       </div>
+                       <div class="img-wrap">
+                          <a class="fancybox" href=<%=@user.photo_four.url%> >
+                            <iframe src=<%=@user.resume%> style="height:35em;" frameborder="0"></iframe>
+                          </a>
+                       </div>
+                    </article>
+                 </div> <!--/row-->
+                 <div class="e-divider-8"></div>
+              </div> <!--/Content Column-->
+            <%end%>
 
           <div class="row">
          </div>

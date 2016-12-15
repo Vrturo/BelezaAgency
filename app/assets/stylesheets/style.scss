@@ -640,6 +640,12 @@ section {
 #blog-hero-image .layer {
   background-color: rgba(255, 255, 255, 0.2); }
 
+#profile-hero-image::before {
+  background: url("beleza-logo-dark.png") no-repeat center center;
+  background-size: cover;}
+#profile-hero-image .layer {
+  background-color: rgba(255, 255, 255, 0.2);  }
+
 #contact-message-hero-image::before {
   background: url("sunshine.jpeg") no-repeat center center;
   background-size: cover; }
