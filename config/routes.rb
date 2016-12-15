@@ -7,11 +7,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create]
-  resources "contacts", only: [:new, :create]
 
   get '/about' => 'application#about'
 
-  get '/contact' => 'contacts#new'
+  get '/contact' => 'users#contact'
 
   get "/login" => "sessions#new", :as => "log_in"
 
