@@ -537,6 +537,7 @@ section {
 #portfolio-hero-image,
 #blog-hero-image,
 #contact-message-hero-image,
+#profile-hero-image,
 #contact-hero-image {
   min-height: 800px;
   background-color: transparent;
@@ -547,6 +548,8 @@ section {
   #portfolio-hero-image:after,
   #blog-hero-image:before,
   #blog-hero-image:after,
+  #profile-hero-image:before,
+  #profile-hero-image:after,
   #contact-message-hero-image:before,
   #contact-message-hero-image:after,
   #contact-hero-image:before,
@@ -556,12 +559,14 @@ section {
   #about-hero-image:after,
   #portfolio-hero-image:after,
   #blog-hero-image:after,
+  #profile-hero-image:after,
   #contact-message-hero-image:after,
   #contact-hero-image:after {
     clear: both; }
   #about-hero-image .hero-wrapper,
   #portfolio-hero-image .hero-wrapper,
   #blog-hero-image .hero-wrapper,
+  #profile-hero-image .hero-wrapper,
   #contact-message-hero-image .hero-wrapper,
   #contact-hero-image .hero-wrapper {
     position: absolute;
@@ -570,14 +575,22 @@ section {
     #about-hero-image .hero-wrapper .hero-text,
     #portfolio-hero-image .hero-wrapper .hero-text,
     #blog-hero-image .hero-wrapper .hero-text,
+    #profile-hero-image .hero-wrapper .hero-text,
     #contact-message-hero-image .hero-wrapper .hero-text,
     #contact-hero-image .hero-wrapper .hero-text {
       margin: 160px 0 170px 0;
       padding: 24px 40px 32px 40px;
       background: rgba(255, 255, 255, 0.4); }
+    .profile-text {
+    margin: 160px 0 170px 0;
+    padding: 24px 40px 32px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    width: 34em;
+    text-align: center; }
   #about-hero-image::before,
   #portfolio-hero-image::before,
   #blog-hero-image::before,
+  #profile-hero-image::before,
   #contact-message-hero-image::before,
   #contact-hero-image::before {
     content: ' ';
@@ -592,6 +605,7 @@ section {
   #about-hero-image h2,
   #portfolio-hero-image h2,
   #blog-hero-image h2,
+  #profile-hero-image h2,
   #contact-message-hero-image h2,
   #contact-hero-image h2 {
     text-transform: uppercase;
@@ -599,6 +613,7 @@ section {
   #about-hero-image .layer,
   #portfolio-hero-image .layer,
   #blog-hero-image .layer,
+  #profile-hero-image .layer,
   #contact-message-hero-image .layer,
   #contact-hero-image .layer {
     position: absolute;
