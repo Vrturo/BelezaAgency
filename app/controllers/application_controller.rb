@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
 
+  def index
+    current_user ? @link = "/users/#{current_user.id}" : @link = "/users/new"
+  end
+
   private
 
   def current_user

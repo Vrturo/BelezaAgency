@@ -9,7 +9,7 @@
 
      <div class="e-divider-8"></div>
      <div class="post-header">
-        <h2 class="e-uppercase"><%= @user.first_name %> <%= @user.last_name %></h2>
+        <h3 class="e-uppercase"><%= @user.first_name %> <%= @user.last_name %></h3>
         <div class="e-divider-2">
           <div class="meta-cat">
             <%= link_to 'Edit Profile Info', edit_user_path(@user), method: :get %> /
@@ -19,7 +19,7 @@
      </div>
      <div class="e-divider-4"></div>
      <div class="row">
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-xs-4">
           <div class="grid-item">
             <img src=<%=@user.photo_one.url%> class="img-responsive">
           </div>
@@ -64,7 +64,7 @@
 
         <div class="col-md-1"></div> <!-- Divider -->
 
-        <div class="col-md-7 col-sm-6">
+        <div class="col-md-7 col-xs-8">
            <div class="e-divider-4"></div>
            <div class="row">
               <div class="col-md-4 col-sm-4 center-text">
