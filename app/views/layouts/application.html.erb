@@ -59,7 +59,7 @@
                        </button>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <% if session[:user_id] %>
+                    <% if current_user %>
                         <nav class="collapse navbar-collapse navbar-ex1-collapse">
                            <ul class="nav navbar-nav navbar-right">
                                 <% current_user = User.find(session[:user_id]) %>
