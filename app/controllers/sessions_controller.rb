@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  layout "application"
+  layout "users"
   protect_from_forgery
 
   def new
