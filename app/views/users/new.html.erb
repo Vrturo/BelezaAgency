@@ -4,7 +4,7 @@
       <div class="container-fluid padding-side-50">
          <div>
             <h1 class="font-accident-two-normal e-uppercase text-center text-danger">Sign Up!</h1>
-             <h4 class="center-text" >Have an account?  <%= link_to "Log in!", '/login', style: 'font-weight:bold;', method: :get %></h4>
+             <h4 class="center-text" >Have an account?  <%= link_to "Log in!", "/sessions/new", style: 'font-weight:bold;', method: :get %></h4>
             <div class="e-divider-1"></div>
             <% if @user.errors.any? %>
               <div class="alert alert-danger">
