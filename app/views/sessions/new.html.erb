@@ -25,21 +25,36 @@
                 <p>Dont have an account?  <a href="/users/new"><b>Sign up!</b></a><p>
             </div> <!-- / col -->
 
-            <!-- Error Flash -->
-            <div class="col-sm-6 l-form-2-box l-form-2-box-text wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                <% if flash.alert %>
-                  <div class="alert alert-danger">
-                    <div class="center-text" id="error_explanation">
-                      <ul>
-                        <li class="text-danger"><h1><%= flash.alert %></h1></li>
-                      </ul>
-                    </div>
+            <!-- Non mobile Error Flash -->
+          <div class="hidden-sm hidden-xs visible-md visible-lg col-sm-4 l-form-2-box l-form-2-box-text wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+              <% if flash.alert %>
+                <div class="alert alert-danger">
+                  <div class="center-text" id="error_explanation">
+                    <ul>
+                      <li class="text-danger"><h1><%= flash.alert %></h1></li>
+                    </ul>
                   </div>
-                <% end %>
-              <p class="medium-paragraph" style="width:700px"></p>
-            </div> <!-- / Error Flash -->
+                </div>
+              <% end %>
+            <p class="medium-paragraph" style="width:700px"></p>
+          </div> <!-- / Error Flash -->
 
-                </div> <!-- / login form -->
+          </div> <!-- / login form -->
+
+          <!-- Mobile Error Flash -->
+          <div class="visible-xs col-sm-4 l-form-2-box l-form-2-box-text wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+              <% if flash.alert %>
+                <div class="alert alert-danger">
+                  <div class="center-text" id="error_explanation">
+                    <ul>
+                      <li class="text-danger"><h1><%= flash.alert %></h1></li>
+                    </ul>
+                  </div>
+                </div>
+              <% end %>
+            <p class="medium-paragraph" style="width:700px"></p>
+          </div> <!-- / Error Flash -->
+
          </div> <!-- / row -->
       </div> <!-- / container -->
    </section>
