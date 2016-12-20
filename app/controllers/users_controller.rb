@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   # GET /username
   def profile
     @user = User.find_by(username: params[:username].downcase)
+    if !@user
+      render :file => "public/404.html",  :status => 404
+    end
   end
 
   # GET /users/new

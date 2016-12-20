@@ -538,7 +538,8 @@ section {
 #blog-hero-image,
 #contact-message-hero-image,
 #profile-hero-image,
-#contact-hero-image {
+#contact-hero-image,
+#error-hero-image {
   min-height: 800px;
   background-color: transparent;
   overflow: hidden;
@@ -553,22 +554,26 @@ section {
   #contact-message-hero-image:before,
   #contact-message-hero-image:after,
   #contact-hero-image:before,
-  #contact-hero-image:after {
+  #contact-hero-image:after,
+  #error-hero-image:before,
+  #error-hero-image:after {
     content: "";
     display: table; }
   #about-hero-image:after,
   #portfolio-hero-image:after,
   #blog-hero-image:after,
   #profile-hero-image:after,
-  #contact-message-hero-image:after,
-  #contact-hero-image:after {
+  #contact-hero-image:after,
+  #error-hero-image:before,
+  #error-hero-image:after{
     clear: both; }
   #about-hero-image .hero-wrapper,
   #portfolio-hero-image .hero-wrapper,
   #blog-hero-image .hero-wrapper,
   #profile-hero-image .hero-wrapper,
   #contact-message-hero-image .hero-wrapper,
-  #contact-hero-image .hero-wrapper {
+  #contact-hero-image .hero-wrapper,
+  #error-hero-image .hero-wrapper {
     position: absolute;
     top: 19%;
     right: 0; }
@@ -576,8 +581,8 @@ section {
     #portfolio-hero-image .hero-wrapper .hero-text,
     #blog-hero-image .hero-wrapper .hero-text,
     #profile-hero-image .hero-wrapper .hero-text,
-    #contact-message-hero-image .hero-wrapper .hero-text,
-    #contact-hero-image .hero-wrapper .hero-text {
+    #contact-hero-image .hero-wrapper .hero-text,
+    #error-hero-image .hero-wrapper .hero-text {
       margin: 160px 0 170px 0;
       padding: 24px 40px 32px 40px;
       background: rgba(255, 255, 255, 0.4); }
@@ -591,8 +596,8 @@ section {
   #portfolio-hero-image::before,
   #blog-hero-image::before,
   #profile-hero-image::before,
-  #contact-message-hero-image::before,
-  #contact-hero-image::before {
+  #contact-hero-image::before,
+  #error-hero-image::before{
     content: ' ';
     position: fixed;
     width: 100%;
@@ -606,16 +611,16 @@ section {
   #portfolio-hero-image h2,
   #blog-hero-image h2,
   #profile-hero-image h2,
-  #contact-message-hero-image h2,
-  #contact-hero-image h2 {
+  #contact-hero-image h2,
+  #error-hero-image h2 {
     text-transform: uppercase;
     letter-spacing: 3px; }
   #about-hero-image .layer,
   #portfolio-hero-image .layer,
   #blog-hero-image .layer,
   #profile-hero-image .layer,
-  #contact-message-hero-image .layer,
-  #contact-hero-image .layer {
+  #contact-hero-image .layer,
+  #error-hero-image .layer {
     position: absolute;
     top: 0;
     left: 0;
@@ -646,16 +651,16 @@ section {
 #profile-hero-image .layer {
   background-color: rgba(255, 255, 255, 0.2);  }
 
-#contact-message-hero-image::before {
-  background: url("sunshine.jpeg") no-repeat center center;
-  background-size: cover; }
-#contact-message-hero-image .layer {
-  background-color: rgba(255, 255, 255, 0.2); }
-
 #contact-hero-image::before {
   background: url("black_swan.jpeg") no-repeat center center;
   background-size: cover; }
 #contact-hero-image .layer {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+#error-hero-image::before {
+  background: url("https://cdn.pixabay.com/photo/2015/11/26/00/14/fashion-1063100_960_720.jpg") no-repeat center center;
+  background-size: cover; }
+#error-hero-image .layer {
   background-color: rgba(255, 255, 255, 0.2); }
 
 .rev_slider_wrapper {
