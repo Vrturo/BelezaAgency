@@ -22,7 +22,7 @@
                   </div>
                   <button type="submit" class="btn btn-danger">Sign in!</button><br><br>
                 <% end%>
-                <p>Dont have an account?  <a href="/users/new"><b>Sign up!</b></a><p>
+                <p>Dont have an account?  <%= link_to "Log in!", "/users/new", style: 'font-weight:bold;', method: :get %><p>
             </div> <!-- / col -->
 
             <!-- Non mobile Error Flash -->
