@@ -63,14 +63,14 @@
                                <ul class="nav navbar-nav navbar-right">
                                     <% current_user = User.find(session[:user_id]) %>
                                     <li><%= link_to "Welcome #{current_user.first_name}!", current_user, method: :get %></li>
-                                    <li><%= link_to "Log out", log_out_path %></li>
+                                    <li><%= link_to "Log out", log_out_path, method: :get %></li>
                                </ul>
                             </nav>
                         <% else %>
                             <nav class="collapse navbar-collapse navbar-ex1-collapse">
                                <ul class="nav navbar-nav navbar-right visible-xs">
                                     <li><a href="/contact" data-no-turbolink>Contact</a></li>
-                                     <li><a href="/users/new" data-no-turbolink>Join</a></li>
+                                    <li><a href="/users/new" data-no-turbolink>Join</a></li>
                                </ul>
                             </nav>
                         <% end %>
