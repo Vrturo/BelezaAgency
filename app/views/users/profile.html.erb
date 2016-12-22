@@ -111,14 +111,11 @@
                  <div class="row">
                     <article class="post-block col-md-12 post hentry">
                        <div class="post-detail">
-                          <h2 class="entry-title"><a href="#!">Resume</a></h2>
-                       </div>
-                       <div class="img-wrap">
-                          <a class="fancybox" href=<%=@user.photo_four.url%> >
-                            <iframe src=<%=@user.resume%> style="height:35em;" frameborder="0"></iframe>
-                          </a>
-                       </div>
-                          <a class="btn btn-danger view-pdf" target="_blank" href="<%=@user.resume%>">View Resume</a>
+                          <h2 class="entry-title">Resume</h2>
+                          <div class="row">
+                            <a class="btn btn-danger" href="<%=@user.resume%>"><strong>Click to View</strong></a>
+                            <a class="btn btn-danger" href="<%=@user.resume%>" download><strong>Click to Download!</strong></a>
+                          </div>
                     </article>
                  </div> <!--/row-->
                  <div class="e-divider-8"></div>
