@@ -135,44 +135,50 @@
               </div>
            </div>
            <div class="center-text">
-             <i class="pe-7s-photo"></i>
-             <h3 class="font-accident-two-normal e-uppercase">Photos</h3>
-             <div class="e-divider-2"></div>
-             <%= form_for(@user, multipart: true) do |f| %>
-                <%= @user.errors.full_messages.first if @user.errors.any? %>
-               <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
-                 <img src=<%=@user.photo_one.url%> class="img-responsive">
-               </a>
-               <%= f.file_field :photo_one, style: "text-indent: 0px", required: true %><br>
-               <div class="form-group">
+              <i class="pe-7s-photo"></i>
+              <h3 class="font-accident-two-normal e-uppercase">Photos</h3>
+              <div class="e-divider-2"></div>
+
+              <%= form_for(@user, multipart: true) do |f| %>
+                <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
+                  <img src=<%=@user.photo_one.url%> class="img-responsive">
+                </a>
+                <%= f.file_field :photo_one, style: "text-indent: 0px", required: true %><br>
+                <div class="form-group">
                   <div class="col-sm-5">
                     <input type="submit" class="btn btn-danger" value="Change Profile Picture">
                   </div>
                 </div>
                 <div class="e-divider-4"></div>
+              <% end %>
 
-               <a class="thumbnail" href=<%=@user.photo_two.url%> target="_blank">
-                 <img src=<%=@user.photo_two.url%> class="img-responsive">
-               </a>
-               <%= f.file_field :photo_two, style: "text-indent: 0px", required: true %><br>
-               <div class="form-group">
-                  <div class="col-sm-5">
-                    <input type="submit" class="btn btn-danger" value="Change Second Picture">
+              <%= form_for(@user, multipart: true) do |f| %>
+                 <a class="thumbnail" href=<%=@user.photo_two.url%> target="_blank">
+                   <img src=<%=@user.photo_two.url%> class="img-responsive">
+                 </a>
+                 <%= f.file_field :photo_two, style: "text-indent: 0px", required: true %><br>
+                 <div class="form-group">
+                    <div class="col-sm-5">
+                      <input type="submit" class="btn btn-danger" value="Change Second Picture">
+                    </div>
                   </div>
-                </div>
                 <div class="e-divider-4"></div>
+              <% end %>
 
-               <a class="thumbnail" href=<%=@user.photo_three.url%> target="_blank">
-                 <img src=<%=@user.photo_three.url%> class="img-responsive">
-               </a>
-               <%= f.file_field :photo_three, style: "text-indent: 0px", required: true %><br>
-               <div class="form-group">
-                  <div class="col-sm-5">
-                    <input type="submit" class="btn btn-danger" value="Change Third Picture">
+              <%= form_for(@user, multipart: true) do |f| %>
+                 <a class="thumbnail" href=<%=@user.photo_three.url%> target="_blank">
+                   <img src=<%=@user.photo_three.url%> class="img-responsive">
+                 </a>
+                 <%= f.file_field :photo_three, style: "text-indent: 0px", required: true %><br>
+                 <div class="form-group">
+                    <div class="col-sm-5">
+                      <input type="submit" class="btn btn-danger" value="Change Third Picture">
+                    </div>
                   </div>
-                </div>
-                <div class="e-divider-4"></div>
+                  <div class="e-divider-4"></div>
+              <% end %>
 
+            <%= form_for(@user, multipart: true) do |f| %>
                <a class="thumbnail" href=<%=@user.photo_four.url%> target="_blank">
                  <img src=<%=@user.photo_four.url%> class="img-responsive">
                </a>
