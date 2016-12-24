@@ -1,4 +1,4 @@
-<% if current_user.id != @user.id && !current_user.admin %>
+<% if current_user.id != @user.id  && !current_user.admin %>
     <script type="text/javascript">
       window.location.href="/";
     </script>
@@ -10,7 +10,7 @@
      <div class="post-header">
         <h3 class="e-uppercase"><%= @user.first_name %> <%= @user.last_name %></h3>
         <div class="e-divider-2">
-          <% if current_user == @user.id%>
+          <% if current_user == @user %>
             <div class="meta-cat">
               <%= link_to 'Edit Profile Info', edit_user_path(@user), method: :get %> /
               <%= link_to 'Edit Login Info', edit_login_path(@user), method: :get %>
@@ -40,13 +40,13 @@
                  <iframe src=<%=@user.resume%> class="xs-hidden" style="height:35em;" frameborder="0"></iframe>
                   <div class="col-sm-offset-1">
                     <a class="btn btn-danger view-pdf" target="_blank" href="<%=@user.resume%>">View Resume</a>
-                    <% if current_user == @user.id%>
+                    <% if current_user == @user %>
                       <%= link_to 'Delete Resume', delete_file_path, method: :get, class: "btn btn-danger view-pdf" %>
                     <% end %>
                   </div>
             <% else %>
                 <div class="e-divider-4"></div>
-                <% if current_user == @user.id%>
+                <% if current_user == @user %>
                   <%= form_for(@user, multipart: true) do |f| %>
                   <h3 class="font-accident-two-normal e-uppercase center-text">
                     <i class="pe-7s-id"></i>
@@ -148,7 +148,7 @@
                 <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
                   <img src=<%=@user.photo_one.url%> class="img-responsive">
                 </a>
-                <% if current_user == @user.id%>
+                <% if current_user == @user %>
                   <%= form_for(@user, multipart: true) do |f| %>
                     <%= f.file_field :photo_one, style: "text-indent: 0px", required: true %><br>
                     <div class="form-group">
@@ -163,7 +163,7 @@
                 <a class="thumbnail" href=<%=@user.photo_two.url%> target="_blank">
                   <img src=<%=@user.photo_two.url%> class="img-responsive">
                 </a>
-                <% if current_user == @user.id%>
+                <% if current_user == @user %>
                   <%= form_for(@user, multipart: true) do |f| %>
                     <%= f.file_field :photo_two, style: "text-indent: 0px", required: true %><br>
                       <div class="form-group">
@@ -178,7 +178,7 @@
                 <a class="thumbnail" href=<%=@user.photo_three.url%> target="_blank">
                    <img src=<%=@user.photo_three.url%> class="img-responsive">
                 </a>
-                <% if current_user == @user.id%>
+                <% if current_user == @user %>
                   <%= form_for(@user, multipart: true) do |f| %>
                     <%= f.file_field :photo_three, style: "text-indent: 0px", required: true %><br>
                       <div class="form-group">
@@ -193,7 +193,7 @@
               <a class="thumbnail" href=<%=@user.photo_four.url%> target="_blank">
                  <img src=<%=@user.photo_four.url%> class="img-responsive">
               </a>
-              <% if current_user == @user.id%>
+              <% if current_user == @user %>
                 <%= form_for(@user, multipart: true) do |f| %>
                   <%= f.file_field :photo_four, style: "text-indent: 0px", required: true %><br>
                   <div class="form-group">
