@@ -37,28 +37,32 @@
                 Resume
               </h3>
                <div class="e-divider-2"></div>
-                 <iframe src=<%=@user.resume%> style="height:35em;" frameborder="0"></iframe>
+                 <iframe src=<%=@user.resume%> class="xs-hidden" style="height:35em;" frameborder="0"></iframe>
                   <div class="col-sm-offset-1">
                     <a class="btn btn-danger view-pdf" target="_blank" href="<%=@user.resume%>">View Resume</a>
-                    <%= link_to 'Delete Resume', delete_file_path, method: :get, class: "btn btn-danger view-pdf" %>
+                    <% if current_user == @user.id%>
+                      <%= link_to 'Delete Resume', delete_file_path, method: :get, class: "btn btn-danger view-pdf" %>
+                    <% end %>
                   </div>
             <% else %>
                 <div class="e-divider-4"></div>
-                <%= form_for(@user, multipart: true) do |f| %>
-                <h3 class="font-accident-two-normal e-uppercase center-text">
-                  <i class="pe-7s-id"></i>
-                  Upload New Resume
-                </h3>
-                  <div class="form-group">
-                    <div class="col-sm-16">
-                      <%= f.file_field :resume, style: "text-indent: 0px", required: true %>
+                <% if current_user == @user.id%>
+                  <%= form_for(@user, multipart: true) do |f| %>
+                  <h3 class="font-accident-two-normal e-uppercase center-text">
+                    <i class="pe-7s-id"></i>
+                    Upload New Resume
+                  </h3>
+                    <div class="form-group">
+                      <div class="col-sm-16">
+                        <%= f.file_field :resume, style: "text-indent: 0px", required: true %>
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-1 col-sm-10">
-                      <%= f.submit 'Upload', class: "btn btn-danger" %>
+                    <div class="form-group">
+                      <div class="col-sm-offset-1 col-sm-10">
+                        <%= f.submit 'Upload', class: "btn btn-danger" %>
+                      </div>
                     </div>
-                  </div>
+                  <% end %>
                 <% end %>
             <% end %>
         </div>
