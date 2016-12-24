@@ -49,7 +49,7 @@
                 </h3>
                   <div class="form-group">
                     <div class="col-sm-16">
-                      <%= f.file_field :resume, style: "text-indent: 0px" %>
+                      <%= f.file_field :resume, style: "text-indent: 0px", required: true %>
                     </div>
                   </div>
                   <div class="form-group">
@@ -143,7 +143,7 @@
                <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
                  <img src=<%=@user.photo_one.url%> class="img-responsive">
                </a>
-               <%= f.file_field :photo_one, style: "text-indent: 0px"%><br>
+               <%= f.file_field :photo_one, style: "text-indent: 0px", required: true %><br>
                <div class="form-group">
                   <div class="col-sm-5">
                     <input type="submit" class="btn btn-danger" value="Change Profile Picture">
@@ -154,7 +154,7 @@
                <a class="thumbnail" href=<%=@user.photo_two.url%> target="_blank">
                  <img src=<%=@user.photo_two.url%> class="img-responsive">
                </a>
-               <%= f.file_field :photo_two, style: "text-indent: 0px"%><br>
+               <%= f.file_field :photo_two, style: "text-indent: 0px", required: true %><br>
                <div class="form-group">
                   <div class="col-sm-5">
                     <input type="submit" class="btn btn-danger" value="Change Second Picture">
@@ -165,7 +165,7 @@
                <a class="thumbnail" href=<%=@user.photo_three.url%> target="_blank">
                  <img src=<%=@user.photo_three.url%> class="img-responsive">
                </a>
-               <%= f.file_field :photo_three, style: "text-indent: 0px"%><br>
+               <%= f.file_field :photo_three, style: "text-indent: 0px", required: true %><br>
                <div class="form-group">
                   <div class="col-sm-5">
                     <input type="submit" class="btn btn-danger" value="Change Third Picture">
@@ -176,7 +176,7 @@
                <a class="thumbnail" href=<%=@user.photo_four.url%> target="_blank">
                  <img src=<%=@user.photo_four.url%> class="img-responsive">
                </a>
-               <%= f.file_field :photo_four, style: "text-indent: 0px"%><br>
+               <%= f.file_field :photo_four, style: "text-indent: 0px", required: true %><br>
                <div class="form-group">
                   <div class="col-sm-5">
                     <input type="submit" class="btn btn-danger" value="Change Fourth Picture">
