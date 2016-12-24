@@ -10,10 +10,12 @@
      <div class="post-header">
         <h3 class="e-uppercase"><%= @user.first_name %> <%= @user.last_name %></h3>
         <div class="e-divider-2">
-          <div class="meta-cat">
-            <%= link_to 'Edit Profile Info', edit_user_path(@user), method: :get %> /
-            <%= link_to 'Edit Login Info', edit_login_path(@user), method: :get %>
-          </div>
+          <% if current_user == @user.id%>
+            <div class="meta-cat">
+              <%= link_to 'Edit Profile Info', edit_user_path(@user), method: :get %> /
+              <%= link_to 'Edit Login Info', edit_login_path(@user), method: :get %>
+            </div>
+          <% end %>
         </div>
      </div>
      <div class="e-divider-4"></div>
