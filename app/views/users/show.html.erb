@@ -144,52 +144,60 @@
                 <a class="thumbnail" href=<%=@user.photo_one.url%> target="_blank">
                   <img src=<%=@user.photo_one.url%> class="img-responsive">
                 </a>
-                <%= form_for(@user, multipart: true) do |f| %>
-                  <%= f.file_field :photo_one, style: "text-indent: 0px", required: true %><br>
-                  <div class="form-group">
-                    <div class="col-sm-5">
-                      <input type="submit" class="btn btn-danger" value="Change Profile Picture">
+                <% if current_user == @user.id%>
+                  <%= form_for(@user, multipart: true) do |f| %>
+                    <%= f.file_field :photo_one, style: "text-indent: 0px", required: true %><br>
+                    <div class="form-group">
+                      <div class="col-sm-5">
+                        <input type="submit" class="btn btn-danger" value="Change Profile Picture">
+                      </div>
                     </div>
-                  </div>
+                  <% end %>
                 <% end %>
                 <div class="e-divider-4"></div>
 
                 <a class="thumbnail" href=<%=@user.photo_two.url%> target="_blank">
                   <img src=<%=@user.photo_two.url%> class="img-responsive">
                 </a>
-                <%= form_for(@user, multipart: true) do |f| %>
-                  <%= f.file_field :photo_two, style: "text-indent: 0px", required: true %><br>
-                    <div class="form-group">
-                      <div class="col-sm-5">
-                        <input type="submit" class="btn btn-danger" value="Change Second Picture">
+                <% if current_user == @user.id%>
+                  <%= form_for(@user, multipart: true) do |f| %>
+                    <%= f.file_field :photo_two, style: "text-indent: 0px", required: true %><br>
+                      <div class="form-group">
+                        <div class="col-sm-5">
+                          <input type="submit" class="btn btn-danger" value="Change Second Picture">
+                        </div>
                       </div>
-                    </div>
+                  <% end %>
                 <% end %>
                 <div class="e-divider-4"></div>
 
                 <a class="thumbnail" href=<%=@user.photo_three.url%> target="_blank">
                    <img src=<%=@user.photo_three.url%> class="img-responsive">
                 </a>
-                <%= form_for(@user, multipart: true) do |f| %>
-                  <%= f.file_field :photo_three, style: "text-indent: 0px", required: true %><br>
-                    <div class="form-group">
-                      <div class="col-sm-5">
-                        <input type="submit" class="btn btn-danger" value="Change Third Picture">
+                <% if current_user == @user.id%>
+                  <%= form_for(@user, multipart: true) do |f| %>
+                    <%= f.file_field :photo_three, style: "text-indent: 0px", required: true %><br>
+                      <div class="form-group">
+                        <div class="col-sm-5">
+                          <input type="submit" class="btn btn-danger" value="Change Third Picture">
+                        </div>
                       </div>
-                    </div>
+                  <% end %>
                 <% end %>
                 <div class="e-divider-4"></div>
 
               <a class="thumbnail" href=<%=@user.photo_four.url%> target="_blank">
                  <img src=<%=@user.photo_four.url%> class="img-responsive">
               </a>
-              <%= form_for(@user, multipart: true) do |f| %>
-                <%= f.file_field :photo_four, style: "text-indent: 0px", required: true %><br>
-                <div class="form-group">
-                  <div class="col-sm-5">
-                    <input type="submit" class="btn btn-danger" value="Change Fourth Picture">
+              <% if current_user == @user.id%>
+                <%= form_for(@user, multipart: true) do |f| %>
+                  <%= f.file_field :photo_four, style: "text-indent: 0px", required: true %><br>
+                  <div class="form-group">
+                    <div class="col-sm-5">
+                      <input type="submit" class="btn btn-danger" value="Change Fourth Picture">
+                    </div>
                   </div>
-                </div>
+                <% end %>
               <% end %>
 
           </div>
