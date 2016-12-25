@@ -60,7 +60,7 @@
                        </button>
                     </div>
                     <nav class="collapse navbar-collapse navbar-ex1-collapse">
-                       <ul class="nav navbar-nav navbar-right">
+                       <ul class="nav navbar-nav navbar-right visible-xs">
                           <% if current_user %>
                             <li><%= link_to "Welcome #{current_user.first_name}!", current_user, method: :get %></li>
                             <li><%= link_to "Log out", log_out_path, method: :get %></li>

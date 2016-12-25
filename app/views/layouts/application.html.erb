@@ -23,10 +23,10 @@
               <a href="#"><img src=<%= asset_path ("beleza-logo-light.png")%> width="85%" alt="logo"></a>
            </li>
            <li class="e-divider-10"></li>
-           <li><a href="/" class="current" data-no-turbolink>Home</a></li>
+           <li><%= link_to "Home", "/", method: :get %></li>
            <!-- <li><a href="/about">About</a></li> -->
-           <li><a href="/contact" data-no-turbolink>Contact</a></li>
-           <li><a href="/users/new" data-no-turbolink>Join</a></li>
+            <li><%= link_to "Contact", "/contact", method: :get %></li>
+           <li><%= link_to "Join", "/users/new", method: :get %></li>
         </ul>
         <div class="e-divider-4"></div>
         <div class="bottom-widget">
