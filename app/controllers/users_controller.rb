@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def index
     @user = User.find(session[:user_id])
     @users = User.all
+    @link = ""
   end
 
   # GET /users/1
